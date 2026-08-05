@@ -117,7 +117,7 @@ const assetsData = {
       id: 'landing-pages',
       name: 'LANDING PAGES',
       version: '1.0.0',
-      objective: 'Capturar leads para campañas o productos específicos.',
+      objective: 'Capturar leads para campañas o soluciones específicas.',
       problem: 'Las campañas de marketing envían tráfico a la página de inicio, perdiendo conversiones.',
       result: 'Páginas de alta conversión enfocadas en un único objetivo.',
       duration: '2 semanas',
@@ -272,7 +272,7 @@ const assetsData = {
   ]
 };
 
-export default function ProductosPage() {
+export default function SolucionesPage() {
   const [activeStage, setActiveStage] = useState('01');
   const [openProduct, setOpenProduct] = useState('frente-comercial-esencial');
 
@@ -292,8 +292,8 @@ export default function ProductosPage() {
   return (
     <>
       <Helmet>
-        <title>RAUVIA Consulting | Portafolio de Activos</title>
-        <meta name="description" content="Catálogo de activos empresariales. RAUVIA construye capacidades que las organizaciones incorporan para resolver etapas específicas de crecimiento." />
+        <title>RAUVIA Consulting | Portafolio de Soluciones</title>
+        <meta name="description" content="Catálogo de soluciones empresariales. RAUVIA construye capacidades que las organizaciones incorporan para resolver etapas específicas de crecimiento." />
       </Helmet>
 
       {/* SECCIÓN 1 — HERO */}
@@ -649,7 +649,7 @@ export default function ProductosPage() {
 
       {/* SECCIÓN FINAL */}
       <FadeInUp>
-        <Footer variant="productos" />
+        <Footer variant="soluciones" />
       </FadeInUp>
     </>
   );

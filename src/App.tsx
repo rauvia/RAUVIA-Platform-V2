@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import NosotrosPage from './pages/NosotrosPage';
-import ProductosPage from './pages/ProductosPage';
+import SolucionesPage from './pages/SolucionesPage';
 import AethryonPage from './pages/AethryonPage';
 
 // Component to scroll to top on route change
@@ -40,7 +40,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/nosotros" element={<NosotrosPage />} />
-              <Route path="/productos" element={<ProductosPage />} />
+              <Route path="/soluciones" element={<SolucionesPage />} />
               <Route path="/aethryon" element={<AethryonPage />} />
             </Routes>
           </main>

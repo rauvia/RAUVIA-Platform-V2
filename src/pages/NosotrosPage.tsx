@@ -57,28 +57,9 @@ export default function NosotrosPage() {
             </div>
 
             <div className="lg:col-span-6 xl:col-span-7 flex justify-center relative z-0 mt-12 lg:mt-0">
-               {/* Hero Custom Graphic */}
-               <div className="relative w-full max-w-2xl aspect-[4/3] flex items-center justify-center">
-                 <div className="absolute inset-0 flex items-center justify-between px-8 lg:px-12">
-                   <div className="flex flex-col gap-8 opacity-40">
-                     <div className="w-4 h-4 bg-slate-400 rounded-full"></div>
-                     <div className="w-4 h-4 bg-slate-400 rounded-full ml-8"></div>
-                     <div className="w-4 h-4 bg-slate-400 rounded-full"></div>
-                   </div>
-                   <div className="h-[2px] w-1/4 bg-slate-300"></div>
-                   <div className="w-16 h-16 border-2 border-rauvia-blue rounded flex items-center justify-center text-rauvia-blue font-mono text-xs">
-                     ANÁLISIS
-                   </div>
-                   <div className="h-[2px] w-1/4 bg-slate-300"></div>
-                   <div className="w-20 h-20 bg-rauvia-navy rounded-xl flex items-center justify-center">
-                      <Hexagon className="w-10 h-10 text-rauvia-gold" strokeWidth={1.5} />
-                   </div>
-                   <div className="h-[2px] w-1/4 bg-slate-300"></div>
-                   <div className="w-24 h-24 bg-white border border-slate-200 shadow-xl rounded-lg flex items-center justify-center flex-col">
-                      <span className="text-[10px] font-bold text-slate-400 mb-1">RESULTADO</span>
-                      <Target className="w-8 h-8 text-rauvia-blue" />
-                   </div>
-                 </div>
+               {/* Hero Graphic */}
+               <div className="relative w-full max-w-2xl">
+                 <img src="/media/rauvia-nosotros-hero-structure.svg" alt="Estructura Nosotros" className="w-full h-auto object-contain" />
                </div>
             </div>
 
@@ -90,86 +71,12 @@ export default function NosotrosPage() {
       <FadeInUp>
       <section className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-6">
-                LAS EMPRESAS NO SIEMPRE CARECEN DE CAPACIDAD.<br/>
-                <span className="text-rauvia-blue">CON FRECUENCIA CARECEN DE ESTRUCTURA.</span>
-              </h2>
-              <div className="space-y-4 text-slate-600 text-base lg:text-lg leading-relaxed">
-                <p>Muchas organizaciones tienen conocimiento, clientes, experiencia y oportunidades.</p>
-                <p>Sin embargo, sus capacidades permanecen separadas: la estrategia no llega a la operación, los procesos dependen de personas específicas, la tecnología se incorpora sin una arquitectura común y el crecimiento aumenta la complejidad.</p>
-                <p className="font-semibold text-rauvia-navy">RAUVIA nace para intervenir en ese punto.</p>
-              </div>
-            </div>
-
+          <div className="w-full">
             <div className="flex justify-center">
               {/* Visual Origen */}
-              <div className="relative w-full max-w-md aspect-square bg-slate-50 rounded-full border border-slate-200 flex items-center justify-center">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-3/4 h-3/4 rounded-full border border-slate-300 border-dashed animate-spin-slow"></div>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-1/2 h-1/2 rounded-full border border-slate-300 animate-spin-reverse-slow"></div>
-                </div>
-                
-                <div className="absolute top-10 left-1/4 w-3 h-3 bg-slate-400 rounded-full"></div>
-                <div className="absolute bottom-12 right-1/4 w-3 h-3 bg-slate-400 rounded-full"></div>
-                <div className="absolute top-1/2 left-4 w-3 h-3 bg-slate-400 rounded-full"></div>
-                
-                <div className="relative z-10 w-32 h-32 bg-rauvia-navy rounded-full flex items-center justify-center text-white text-center shadow-2xl">
-                  <span className="text-xs font-bold tracking-widest leading-tight">SISTEMA<br/>OPERATIVO</span>
-                </div>
-                
-                {/* Converging lines */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100">
-                  <line x1="25" y1="10" x2="50" y2="50" stroke="#94a3b8" strokeWidth="0.5" strokeDasharray="2 2" />
-                  <line x1="75" y1="88" x2="50" y2="50" stroke="#94a3b8" strokeWidth="0.5" strokeDasharray="2 2" />
-                  <line x1="4" y1="50" x2="50" y2="50" stroke="#94a3b8" strokeWidth="0.5" strokeDasharray="2 2" />
-                </svg>
+              <div className="relative w-full">
+                <img src="/media/rauvia-structure-problem-aethryon.svg" alt="Estructura del Problema" className="w-full h-auto object-contain" />
               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-      </FadeInUp>
-
-      {/* SECCIÓN 3 — QUÉ HACE RAUVIA */}
-      <FadeInUp>
-      <section className="py-24 bg-rauvia-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight">
-              NO CONECTAMOS HERRAMIENTAS.<br/>
-              <span className="text-rauvia-blue">CONECTAMOS CAPACIDADES.</span>
-            </h2>
-          </div>
-
-          <div className="relative max-w-4xl mx-auto">
-            {/* Desktop Connectors */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-slate-200 -translate-y-1/2"></div>
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2"></div>
-            
-            {/* Core */}
-            <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white border border-slate-200 rounded-full items-center justify-center z-10 shadow-sm">
-              <Hexagon className="w-6 h-6 text-rauvia-gold" />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-              {[
-                { title: 'ESTRATEGIA', desc: 'Define dirección, prioridades y decisiones.' },
-                { title: 'PROCESOS', desc: 'Convierte conocimiento y experiencia en una forma repetible de operar.' },
-                { title: 'TECNOLOGÍA', desc: 'Construye activos e infraestructura que sostienen la ejecución.' },
-                { title: 'MEDICIÓN', desc: 'Hace visible el desempeño y permite decidir con evidencia.' }
-              ].map((item, i) => (
-                <div key={i} className="relative z-20 bg-white p-8 rounded-xl border border-slate-100 shadow-sm">
-                  <div className="text-xs font-bold text-slate-300 mb-2 font-mono">0{i+1}</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy mb-3 tracking-wide">{item.title}</h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>

@@ -51,38 +51,11 @@ export default function AethryonPage() {
             </div>
 
             <div className="lg:col-span-6 xl:col-span-7 flex justify-center relative z-0 mt-12 lg:mt-0">
-               {/* Gráfico AETHRYON simplificado */}
-               <div className="relative w-full max-w-xl aspect-square flex items-center justify-center">
-                  {/* Blueprint lines */}
-                  <div className="absolute inset-0 border border-slate-200/50 rounded-full"></div>
-                  <div className="absolute inset-4 border border-slate-200/50 border-dashed rounded-full animate-spin-slow"></div>
-                  
-                  {/* Señales dispersas */}
-                  <div className="absolute top-10 left-10 w-3 h-3 bg-slate-300 rounded-full"></div>
-                  <div className="absolute bottom-20 right-10 w-2 h-2 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-1/2 right-4 w-4 h-4 bg-rauvia-blue/30 rounded-full"></div>
-                  <div className="absolute bottom-1/4 left-1/4 w-3 h-3 bg-slate-300 rounded-full"></div>
-
-                  {/* Núcleo AETHRYON */}
-                  <div className="w-32 h-32 bg-rauvia-navy rounded-2xl flex flex-col items-center justify-center relative z-10 shadow-2xl overflow-hidden border border-slate-700">
-                    <div className="absolute inset-0 bg-rauvia-blue/10"></div>
-                    <Hexagon className="w-16 h-16 text-rauvia-gold relative z-10" strokeWidth={1.5} />
-                  </div>
-                  
-                  {/* Conexiones hacia el núcleo */}
-                  <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 0 }}>
-                    <path d="M50,50 L250,250" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 4" />
-                    <path d="M450,100 L280,250" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 4" />
-                    <path d="M100,450 L250,280" stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 4" />
-                  </svg>
-                  
-                  {/* Ruta de acción (Prioridad) */}
-                  <div className="absolute top-1/2 left-1/2 w-[250px] h-[2px] bg-gradient-to-r from-rauvia-gold to-transparent -translate-y-1/2 origin-left rotate-[-25deg] z-0"></div>
-                  <div className="absolute top-[20%] right-[10%] bg-white border border-rauvia-gold/50 px-4 py-2 rounded text-xs font-bold text-rauvia-navy tracking-wider shadow-sm z-20 flex items-center gap-2">
-                    <Target className="w-3 h-3 text-rauvia-gold" />
-                    PRIORIDAD ACTIVA
-                  </div>
-               </div>
+               <img 
+                 src="/media/aethryon-hero-orbital-v2-clean.svg" 
+                 alt="AETHRYON" 
+                 className="w-full object-contain" 
+               />
             </div>
 
           </div>
@@ -107,30 +80,30 @@ export default function AethryonPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* ESCENARIO 01 */}
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group">
-              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                 <Activity className="w-6 h-6 text-rauvia-blue" />
               </div>
               <h3 className="text-lg font-bold text-rauvia-navy mb-3">HAY OPORTUNIDADES, PERO NO AVANZAN</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">Existen clientes, proyectos o ideas, pero no está claro cuál merece atención inmediata ni qué condiciones deben cumplirse para avanzar.</p>
+              <p className="text-sm text-slate-600 leading-relaxed text-justify">Existen clientes, proyectos o ideas, pero no está claro cuál merece atención inmediata ni qué condiciones deben cumplirse para avanzar.</p>
             </div>
             
             {/* ESCENARIO 02 */}
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group">
-              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                 <AlertCircle className="w-6 h-6 text-rauvia-gold" />
               </div>
               <h3 className="text-lg font-bold text-rauvia-navy mb-3">LA OPERACIÓN GENERA FRICCIÓN</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">Los procesos dependen de personas, existe retrabajo o cada intento de crecer aumenta el desorden y la presión sobre el equipo.</p>
+              <p className="text-sm text-slate-600 leading-relaxed text-justify">Los procesos dependen de personas, existe retrabajo o cada intento de crecer aumenta el desorden y la presión sobre el equipo.</p>
             </div>
 
             {/* ESCENARIO 03 */}
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group">
-              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-md hover:border-rauvia-blue/30 transition-all group flex flex-col items-center text-center">
+              <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform mx-auto">
                 <Network className="w-6 h-6 text-rauvia-navy" />
               </div>
               <h3 className="text-lg font-bold text-rauvia-navy mb-3">HAY DEMASIADAS DECISIONES ABIERTAS</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">Se distribuyen tiempo, dinero y atención entre distintas iniciativas sin saber cuál puede producir mayor impacto.</p>
+              <p className="text-sm text-slate-600 leading-relaxed text-justify">Se distribuyen tiempo, dinero y atención entre distintas iniciativas sin saber cuál puede producir mayor impacto.</p>
             </div>
           </div>
         </div>
@@ -250,13 +223,13 @@ export default function AethryonPage() {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
               
               {/* PASO 01 */}
-              <div className="flex flex-col">
-                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-slate-200 rounded-full items-center justify-center mx-auto mb-6 z-10 text-slate-400 font-bold">1</div>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col">
+              <div className="flex flex-col items-center text-center">
+                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-slate-200 rounded-full items-center justify-center mb-6 z-10 text-slate-400 font-bold">1</div>
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col items-center">
                   <span className="lg:hidden text-xs font-bold text-slate-400 mb-2">PASO 01</span>
                   <h3 className="text-base font-bold text-rauvia-navy mb-3">ENTENDER LA SITUACIÓN</h3>
-                  <p className="text-sm text-slate-600 mb-6 flex-grow">Reunimos el contexto, el objetivo, las señales disponibles y las restricciones reales de la empresa.</p>
-                  <div className="bg-white border border-slate-100 p-3 rounded-lg mt-auto">
+                  <p className="text-sm text-slate-600 mb-6 flex-grow text-justify">Reunimos el contexto, el objetivo, las señales disponibles y las restricciones reales de la empresa.</p>
+                  <div className="bg-white border border-slate-100 p-3 rounded-lg mt-auto w-full">
                     <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Resultado</span>
                     <span className="text-sm font-semibold text-rauvia-navy">Una definición clara del problema.</span>
                   </div>
@@ -264,15 +237,15 @@ export default function AethryonPage() {
               </div>
 
               {/* PASO 02 */}
-              <div className="flex flex-col">
-                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-slate-200 rounded-full items-center justify-center mx-auto mb-6 z-10 text-slate-400 font-bold">2</div>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col relative">
+              <div className="flex flex-col items-center text-center">
+                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-slate-200 rounded-full items-center justify-center mb-6 z-10 text-slate-400 font-bold">2</div>
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col items-center relative">
                   {/* Vertical connector for mobile */}
                   <div className="lg:hidden absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-slate-200"></div>
                   <span className="lg:hidden text-xs font-bold text-slate-400 mb-2">PASO 02</span>
                   <h3 className="text-base font-bold text-rauvia-navy mb-3">EVALUAR LAS CONDICIONES</h3>
-                  <p className="text-sm text-slate-600 mb-6 flex-grow">Analizamos si existe una necesidad real, qué obstáculos pueden presentarse y qué tan preparada está la empresa para actuar.</p>
-                  <div className="bg-white border border-slate-100 p-3 rounded-lg mt-auto">
+                  <p className="text-sm text-slate-600 mb-6 flex-grow text-justify">Analizamos si existe una necesidad real, qué obstáculos pueden presentarse y qué tan preparada está la empresa para actuar.</p>
+                  <div className="bg-white border border-slate-100 p-3 rounded-lg mt-auto w-full">
                     <span className="text-[10px] font-bold text-slate-400 uppercase block mb-1">Resultado</span>
                     <span className="text-sm font-semibold text-rauvia-navy">Una lectura objetiva de viabilidad y riesgo.</span>
                   </div>
@@ -280,14 +253,14 @@ export default function AethryonPage() {
               </div>
 
               {/* PASO 03 */}
-              <div className="flex flex-col">
-                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-rauvia-gold rounded-full items-center justify-center mx-auto mb-6 z-10 text-rauvia-gold font-bold">3</div>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col relative">
+              <div className="flex flex-col items-center text-center">
+                <div className="hidden lg:flex w-12 h-12 bg-white border-2 border-rauvia-gold rounded-full items-center justify-center mb-6 z-10 text-rauvia-gold font-bold">3</div>
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col items-center relative">
                   <div className="lg:hidden absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-slate-200"></div>
                   <span className="lg:hidden text-xs font-bold text-slate-400 mb-2">PASO 03</span>
                   <h3 className="text-base font-bold text-rauvia-navy mb-3">ENCONTRAR LA PRIORIDAD</h3>
-                  <p className="text-sm text-slate-600 mb-6 flex-grow">Comparamos problemas, oportunidades y dependencias para identificar qué intervención puede producir mayor avance.</p>
-                  <div className="bg-orange-50 border border-rauvia-gold/30 p-3 rounded-lg mt-auto">
+                  <p className="text-sm text-slate-600 mb-6 flex-grow text-justify">Comparamos problemas, oportunidades y dependencias para identificar qué intervención puede producir mayor avance.</p>
+                  <div className="bg-orange-50 border border-rauvia-gold/30 p-3 rounded-lg mt-auto w-full">
                     <span className="text-[10px] font-bold text-rauvia-gold uppercase block mb-1">Resultado</span>
                     <span className="text-sm font-bold text-rauvia-navy">Una prioridad justificada.</span>
                   </div>
@@ -295,14 +268,14 @@ export default function AethryonPage() {
               </div>
 
               {/* PASO 04 */}
-              <div className="flex flex-col">
-                <div className="hidden lg:flex w-12 h-12 bg-rauvia-navy border-2 border-rauvia-navy rounded-full items-center justify-center mx-auto mb-6 z-10 text-white font-bold">4</div>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col relative shadow-sm">
+              <div className="flex flex-col items-center text-center">
+                <div className="hidden lg:flex w-12 h-12 bg-rauvia-navy border-2 border-rauvia-navy rounded-full items-center justify-center mb-6 z-10 text-white font-bold">4</div>
+                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex-grow flex flex-col items-center relative shadow-sm">
                   <div className="lg:hidden absolute -top-8 left-1/2 -translate-x-1/2 w-0.5 h-8 bg-slate-200"></div>
                   <span className="lg:hidden text-xs font-bold text-slate-400 mb-2">PASO 04</span>
                   <h3 className="text-base font-bold text-rauvia-navy mb-3">DISEÑAR LA RUTA</h3>
-                  <p className="text-sm text-slate-600 mb-6 flex-grow">Convertimos la prioridad en una secuencia de acciones, responsables, dependencias e indicadores.</p>
-                  <div className="bg-blue-50 border border-blue-200 p-3 rounded-lg mt-auto">
+                  <p className="text-sm text-slate-600 mb-6 flex-grow text-justify">Convertimos la prioridad en una secuencia de acciones, responsables, dependencias e indicadores.</p>
+                  <div className="bg-blue-50 border border-blue-200 p-3 rounded-lg mt-auto w-full">
                     <span className="text-[10px] font-bold text-rauvia-blue uppercase block mb-1">Resultado</span>
                     <span className="text-sm font-bold text-rauvia-navy">Una ruta ejecutable.</span>
                   </div>
@@ -329,73 +302,73 @@ export default function AethryonPage() {
           <div className="space-y-4">
             <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden" open>
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50">
-                <div className="flex items-center gap-4">
+                <div className="flex-1 flex flex-col items-center gap-2">
                   <div className="text-xs font-mono font-bold text-slate-400">01</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy">CLARIDAD</h3>
+                  <h3 className="text-lg font-bold text-rauvia-navy text-center">CLARIDAD</h3>
                 </div>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                <p>¿El problema y el resultado esperado están definidos con suficiente precisión?</p>
+                <p className="text-justify">¿El problema y el resultado esperado están definidos con suficiente precisión?</p>
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50">
-                <div className="flex items-center gap-4">
+                <div className="flex-1 flex flex-col items-center gap-2">
                   <div className="text-xs font-mono font-bold text-slate-400">02</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy">FRICCIÓN</h3>
+                  <h3 className="text-lg font-bold text-rauvia-navy text-center">DIFICULTADES</h3>
                 </div>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                <p>¿Qué obstáculos internos o externos pueden impedir que la iniciativa avance?</p>
+                <p className="text-justify">¿Qué obstáculos internos o externos pueden impedir que la iniciativa avance?</p>
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50">
-                <div className="flex items-center gap-4">
+                <div className="flex-1 flex flex-col items-center gap-2">
                   <div className="text-xs font-mono font-bold text-slate-400">03</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy">ALINEACIÓN</h3>
+                  <h3 className="text-lg font-bold text-rauvia-navy text-center">ALINEACIÓN</h3>
                 </div>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                <p>¿Las condiciones, actores y recursos necesarios comienzan a coincidir?</p>
+                <p className="text-justify">¿Las condiciones, actores y recursos necesarios comienzan a coincidir?</p>
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50">
-                <div className="flex items-center gap-4">
+                <div className="flex-1 flex flex-col items-center gap-2">
                   <div className="text-xs font-mono font-bold text-slate-400">04</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy">OPORTUNIDAD</h3>
+                  <h3 className="text-lg font-bold text-rauvia-navy text-center">OPORTUNIDAD</h3>
                 </div>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                <p>¿Existe un momento favorable para actuar o conviene esperar?</p>
+                <p className="text-justify">¿Existe un momento favorable para actuar o conviene esperar?</p>
               </div>
             </details>
 
             <details className="group bg-white border border-slate-200 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
               <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-slate-50">
-                <div className="flex items-center gap-4">
+                <div className="flex-1 flex flex-col items-center gap-2">
                   <div className="text-xs font-mono font-bold text-slate-400">05</div>
-                  <h3 className="text-lg font-bold text-rauvia-navy">CAPACIDAD DE EJECUCIÓN</h3>
+                  <h3 className="text-lg font-bold text-rauvia-navy text-center">CAPACIDAD DE EJECUCIÓN</h3>
                 </div>
                 <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" />
               </summary>
               <div className="p-6 pt-0 text-slate-600 border-t border-slate-100">
-                <p>¿La empresa cuenta con responsables, recursos y condiciones para implementar la decisión?</p>
+                <p className="text-justify">¿La empresa cuenta con responsables, recursos y condiciones para implementar la decisión?</p>
               </div>
             </details>
           </div>
 
-          <div className="mt-8 p-4 bg-slate-100/50 border border-slate-200 rounded-lg text-center">
-            <p className="text-xs text-slate-500">
-              Nota técnica: Dentro del sistema, estas condiciones se modelan mediante CIV, NOX, Convergencia, Tyche y capacidad de ejecución.
+          <div className="mt-8 p-4 bg-slate-100/50 border border-slate-200 rounded-lg flex justify-center">
+            <p className="text-xs text-slate-500 text-center">
+              Nota: Dentro del sistema, estas condiciones se modelan mediante indicadores.
             </p>
           </div>
         </div>
@@ -575,7 +548,7 @@ export default function AethryonPage() {
           </div>
 
           <div className="mt-12">
-            <a href="/productos" className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-rauvia-navy px-6 py-3 rounded text-sm font-bold tracking-wider transition-all min-h-[52px]">
+            <a href="/soluciones" className="inline-flex items-center justify-center gap-2 bg-white border border-slate-200 hover:bg-slate-50 text-rauvia-navy px-6 py-3 rounded text-sm font-bold tracking-wider transition-all min-h-[52px]">
               CONOCER LAS SOLUCIONES
               <ArrowRight className="w-4 h-4" />
             </a>
@@ -611,7 +584,7 @@ export default function AethryonPage() {
       </section>
       </FadeInUp>
 
-      <Footer variant="productos" /> {/* Reusing the layout that hides the big CTA in the footer itself since we just added it above */}
+      <Footer variant="soluciones" /> {/* Reusing the layout that hides the big CTA in the footer itself since we just added it above */}
     </>
   );
 }

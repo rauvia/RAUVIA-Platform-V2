@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 interface FooterProps {
-  variant?: 'home' | 'nosotros' | 'productos';
+  variant?: 'home' | 'nosotros' | 'soluciones';
 }
 
 export default function Footer({ variant = 'home' }: FooterProps) {
   const isHome = variant === 'home';
   const isNosotros = variant === 'nosotros';
-  const isProductos = variant === 'productos';
+  const isSoluciones = variant === 'soluciones';
   
   return (
     <footer className="bg-rauvia-navy-dark text-white relative overflow-hidden flex flex-col min-h-[100svh] justify-between">
@@ -65,7 +65,7 @@ export default function Footer({ variant = 'home' }: FooterProps) {
         ) : (
           <div className="flex flex-col items-center text-center w-full max-w-4xl mx-auto space-y-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-white">
-              {isProductos ? (
+              {isSoluciones ? (
                 <>
                   NO TODAS LAS EMPRESAS NECESITAN<br/>
                   EL MISMO ACTIVO.<br/>

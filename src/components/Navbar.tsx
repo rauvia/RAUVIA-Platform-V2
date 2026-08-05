@@ -32,7 +32,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navItems = [
-    { name: 'SOLUCIONES', href: '/productos' },
+    { name: 'SOLUCIONES', href: '/soluciones' },
     { name: 'AETHRYON', href: '/aethryon' },
     { name: 'RECURSOS', href: '/#recursos' },
     { name: 'NOSOTROS', href: '/nosotros' }
