@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 2048 500"
+  role="img"
+  aria-labelledby="title desc">
+  <title id="title">El problema — RAUVIA</title>
+  <desc id="desc">Tres problemas interactivos: información dispersa, procesos fragmentados y decisiones sin claridad.</desc>
+
+  <defs>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#2563EB" flood-opacity=".22"/>
+    </filter>
+    <filter id="goldGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#F4B942" flood-opacity=".45"/>
+    </filter>
+
+    <style><![CDATA[
+      .f{font-family:Inter,Arial,sans-serif}
+      .ey{font-size:18px;font-weight:800;letter-spacing:.08em;fill:#2563EB}
+      .h1{font-size:40px;font-weight:500;fill:#0F172A}
+      .h1a{font-size:40px;font-weight:600;fill:#2563EB}
+      .t{font-size:18px;font-weight:800;fill:#2563EB;letter-spacing:.01em}
+      .b{font-size:18px;fill:#334155}
+      .hex{fill:none;stroke:#2563EB;stroke-width:2.2;stroke-linejoin:round}
+      .thin{fill:none;stroke:#CBD5E1;stroke-width:1.25;opacity:.72}
+      .node{fill:#0B3A53}
+      .core{fill:#2A7F9E;stroke:#155E75;stroke-width:1.8}
+      .gold{fill:#F4B942;stroke:#D99612;stroke-width:1.3}
+      .module{cursor:pointer;outline:none}
+      .icon-wrap{
+        transform-box:fill-box;
+        transform-origin:center;
+        transition:transform .28s ease,filter .28s ease
+      }
+      .module:hover .icon-wrap,
+      .module:focus .icon-wrap,
+      .module:focus-visible .icon-wrap{
+        transform:translateY(-8px) scale(1.05);
+        filter:url(#softGlow)
+      }
+      .module .t,.module .b{
+        transition:fill .25s ease
+      }
+      .module:hover .t,
+      .module:focus .t,
+      .module:focus-visible .t{fill:#0F172A}
+      .module:hover .b,
+      .module:focus .b,
+      .module:focus-visible .b{fill:#0F172A}
+      .ring{
+        fill:none;
+        stroke:#F4B942;
+        stroke-width:2;
+        opacity:0;
+        transform-box:fill-box;
+        transform-origin:center;
+        transform:scale(.84);
+        transition:opacity .25s ease,transform .25s ease
+      }
+      .module:hover .ring,
+      .module:focus .ring,
+      .module:focus-visible .ring{
+        opacity:1;
+        transform:scale(1)
+      }
+      .module:hover .scatter-node,
+      .module:focus .scatter-node,
+      .module:focus-visible .scatter-node{
+        animation:scatter 1.8s ease-in-out infinite
+      }
+      .module:hover .fragment-line,
+      .module:focus .fragment-line,
+      .module:focus-visible .fragment-line{
+        animation:fragment 1.5s ease-in-out infinite
+      }
+      .module:hover .question,
+      .module:focus .question,
+      .module:focus-visible .question{
+        animation:pulseQ 1.4s ease-in-out infinite;
+        filter:url(#goldGlow)
+      }
+      .module:hover .core-pulse,
+      .module:focus .core-pulse,
+      .module:focus-visible .core-pulse{
+        animation:corePulse 1.6s ease-in-out infinite;
+        transform-box:fill-box;
+        transform-origin:center
+      }
+      @keyframes scatter{
+        0%,100%{transform:translate(0,0)}
+        50%{transform:translate(4px,-4px)}
+      }
+      @keyframes fragment{
+        0%,100%{stroke-dashoffset:0;opacity:.55}
+        50%{stroke-dashoffset:16;opacity:1}
+      }
+      @keyframes pulseQ{
+        0%,100%{transform:scale(1);opacity:.65}
+        50%{transform:scale(1.18);opacity:1}
+      }
+      @keyframes corePulse{
+        0%,100%{transform:scale(1)}
+        50%{transform:scale(1.12)}
+      }
+      @media (prefers-reduced-motion:reduce){
+        *{animation:none!important;transition:none!important}
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="2048" height="500" fill="#F8FAFC"/>
+
+  <!-- Blueprint background -->
+  <g stroke="#CBD5E1" stroke-width="1" opacity=".22">
+    <path d="M0 100H2048M0 200H2048M0 300H2048M0 400H2048"/>
+    <path d="M100 0V500M200 0V500M300 0V500M400 0V500M500 0V500M600 0V500M700 0V500M800 0V500M900 0V500M1000 0V500M1100 0V500M1200 0V500M1300 0V500M1400 0V500M1500 0V500M1600 0V500M1700 0V500M1800 0V500M1900 0V500M2000 0V500"/>
+  </g>
+
+  <!-- Left block -->
+  <g class="f" transform="translate(78 68)">
+    <text class="ey">EL PROBLEMA</text>
+    <rect x="0" y="26" width="38" height="4" rx="2" fill="#F4B942"/>
+    <text x="0" y="122" class="h1">Muchas empresas</text>
+    <text x="0" y="176" class="h1">tienen capacidades.</text>
+    <text x="0" y="230" class="h1a">Pocas las convierten</text>
+    <text x="0" y="284" class="h1a">en resultados.</text>
+  </g>
+
+  <!-- separators -->
+  <g stroke="#CBD5E1" stroke-width="1.4" opacity=".65">
+    <line x1="560" y1="0" x2="560" y2="500"/>
+    <line x1="1002" y1="86" x2="1002" y2="408"/>
+    <line x1="1455" y1="86" x2="1455" y2="408"/>
+  </g>
+
+  <!-- Module 1 -->
+  <g class="module" tabindex="0" role="button" aria-label="Información dispersa">
+    <g transform="translate(625 58)">
+      <g class="icon-wrap">
+        <circle cx="92" cy="90" r="78" class="ring"/>
+        <polygon points="92,0 148,32 148,96 92,128 36,96 36,32" class="hex"/>
+        <g class="thin">
+          <line x1="92" y1="0" x2="92" y2="128"/>
+          <line x1="36" y1="32" x2="148" y2="96"/>
+          <line x1="148" y1="32" x2="36" y2="96"/>
+          <line x1="36" y1="64" x2="148" y2="64"/>
+        </g>
+        <g class="node scatter-node">
+          <circle cx="92" cy="0" r="5"/>
+          <circle cx="36" cy="32" r="5"/>
+          <circle cx="148" cy="32" r="5"/>
+          <circle cx="36" cy="96" r="5"/>
+          <circle cx="148" cy="96" r="5"/>
+          <circle cx="92" cy="128" r="5"/>
+        </g>
+        <polygon points="92,50 106,58 106,74 92,82 78,74 78,58" class="core core-pulse"/>
+      </g>
+      <text x="92" y="190" text-anchor="middle" class="t f">INFORMACIÓN DISPERSA</text>
+      <text x="92" y="232" text-anchor="middle" class="b f">Los datos existen, pero no están</text>
+      <text x="92" y="262" text-anchor="middle" class="b f">conectados ni organizados.</text>
+    </g>
+  </g>
+
+  <!-- Module 2 -->
+  <g class="module" tabindex="0" role="button" aria-label="Procesos fragmentados">
+    <g transform="translate(1070 58)">
+      <g class="icon-wrap">
+        <circle cx="92" cy="90" r="78" class="ring"/>
+        <polygon points="92,0 148,32 148,96 92,128 36,96 36,32" class="hex"/>
+        <g class="thin fragment-line" stroke-dasharray="5 7">
+          <line x1="92" y1="0" x2="92" y2="128"/>
+          <line x1="36" y1="32" x2="148" y2="96"/>
+          <line x1="148" y1="32" x2="36" y2="96"/>
+          <line x1="36" y1="64" x2="148" y2="64"/>
+        </g>
+        <g class="node">
+          <circle cx="92" cy="0" r="5"/>
+          <circle cx="36" cy="32" r="5"/>
+          <circle cx="148" cy="32" r="5"/>
+          <circle cx="36" cy="96" r="5"/>
+          <circle cx="148" cy="96" r="5"/>
+          <circle cx="92" cy="128" r="5"/>
+        </g>
+        <polygon points="92,44 116,58 116,86 92,100 68,86 68,58" fill="none" stroke="#2563EB" stroke-width="2.2" class="core-pulse"/>
+      </g>
+      <text x="92" y="190" text-anchor="middle" class="t f">PROCESOS FRAGMENTADOS</text>
+      <text x="92" y="232" text-anchor="middle" class="b f">Cada área trabaja distinto, sin una</text>
+      <text x="92" y="262" text-anchor="middle" class="b f">estructura común que permita escalar.</text>
+    </g>
+  </g>
+
+  <!-- Module 3 -->
+  <g class="module" tabindex="0" role="button" aria-label="Decisiones sin claridad">
+    <g transform="translate(1522 58)">
+      <g class="icon-wrap">
+        <circle cx="92" cy="90" r="78" class="ring"/>
+        <polygon points="92,0 148,32 148,96 92,128 36,96 36,32" class="thin"/>
+        <line x1="92" y1="64" x2="92" y2="0" class="thin"/>
+        <line x1="92" y1="64" x2="148" y2="32" class="thin"/>
+        <line x1="92" y1="64" x2="148" y2="96" class="thin"/>
+        <line x1="92" y1="64" x2="92" y2="128" class="thin"/>
+        <line x1="92" y1="64" x2="36" y2="96" class="thin"/>
+        <line x1="92" y1="64" x2="36" y2="32" class="thin"/>
+        <polygon points="92,45 110,55 110,75 92,85 74,75 74,55" fill="none" stroke="#2563EB" stroke-width="2.2"/>
+        <g fill="#F8FAFC" stroke="#2563EB" stroke-width="2.2">
+          <polygon points="92,-10 102,-4 102,8 92,14 82,8 82,-4"/>
+          <polygon points="148,22 158,28 158,40 148,46 138,40 138,28"/>
+          <polygon points="148,86 158,92 158,104 148,110 138,104 138,92"/>
+          <polygon points="92,118 102,124 102,136 92,142 82,136 82,124"/>
+          <polygon points="36,86 46,92 46,104 36,110 26,104 26,92"/>
+          <polygon points="36,22 46,28 46,40 36,46 26,40 26,28"/>
+        </g>
+        <text x="92" y="34" text-anchor="middle" class="question f" font-size="30" font-weight="700" fill="#2563EB">?</text>
+        <circle cx="92" cy="128" r="4" class="gold"/>
+      </g>
+      <text x="92" y="190" text-anchor="middle" class="t f">DECISIONES SIN CLARIDAD</text>
+      <text x="92" y="232" text-anchor="middle" class="b f">Sin visibilidad en métricas</text>
+      <text x="92" y="262" text-anchor="middle" class="b f">confiables, es imposible tomar</text>
+      <text x="92" y="292" text-anchor="middle" class="b f">mejores decisiones.</text>
+    </g>
+  </g>
+</svg>
