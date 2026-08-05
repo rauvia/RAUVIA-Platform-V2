@@ -86,33 +86,10 @@ export default function NosotrosPage() {
       {/* SECCIÓN 4 — FORMA DE TRABAJO */}
       <FadeInUp>
       <section className="py-24 bg-white border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-6">
-              DE LA AMBIGÜEDAD A<br/>
-              <span className="text-rauvia-blue">UN SISTEMA EJECUTABLE.</span>
-            </h2>
-            <p className="text-slate-600 max-w-2xl text-base lg:text-lg leading-relaxed">
-              No comenzamos por una herramienta ni por una solución predeterminada. Comenzamos por entender qué está impidiendo que la empresa avance, qué capacidades ya existen y qué estructura debe construirse para convertirlas en resultados.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Horizontal line desktop */}
-            <div className="hidden lg:block absolute top-6 left-0 right-0 h-px bg-slate-200"></div>
-            {/* Vertical line mobile */}
-            <div className="lg:hidden absolute left-6 top-0 bottom-0 w-px bg-slate-200"></div>
-
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-4 justify-between relative z-10">
-              {['Comprender', 'Delimitar', 'Diseñar', 'Construir', 'Implementar', 'Medir'].map((step, idx) => (
-                <div key={idx} className="group relative flex lg:flex-col items-center lg:items-start gap-4 lg:gap-6 pl-4 lg:pl-0 cursor-pointer w-full lg:w-[15%]">
-                  <div className="w-4 h-4 bg-white border-2 border-slate-300 rounded-full group-hover:border-rauvia-blue group-hover:scale-125 transition-all z-10 flex-shrink-0 relative -left-[1.35rem] lg:left-0 lg:mx-auto"></div>
-                  <div>
-                    <div className="text-rauvia-gold font-mono text-xs font-bold mb-1">0{idx + 1}</div>
-                    <div className="font-bold text-slate-700 group-hover:text-rauvia-navy transition-colors text-sm uppercase tracking-wider">{step}</div>
-                  </div>
-                </div>
-              ))}
+        <div className="w-full px-4 sm:px-6 lg:px-12 mx-auto">
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-[1600px]">
+              <img src="/media/aethryon-process-v5.svg" alt="De la ambigüedad a un sistema ejecutable" className="w-full h-auto object-contain" />
             </div>
           </div>
         </div>
@@ -125,7 +102,7 @@ export default function NosotrosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold mb-16 text-center tracking-tight">PRINCIPIOS DE TRABAJO</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               { title: 'CLARIDAD ANTES QUE COMPLEJIDAD', desc: 'Una solución debe poder comprenderse antes de poder ejecutarse.', icon: 'M4 4h16v16H4z M10 10h4v4h-4z' },
               { title: 'ESTRUCTURA ANTES QUE ESCALA', desc: 'Crecer sin estructura aumenta fricción, dependencia y costo.', icon: 'M4 20h16v-4H4z M8 12h8v-4H8z M10 4h4v4h-4z' },
@@ -133,7 +110,7 @@ export default function NosotrosPage() {
               { title: 'EVIDENCIA ANTES QUE CERTEZA ARTIFICIAL', desc: 'Diferenciamos hechos, hipótesis e inferencias antes de recomendar una decisión.', icon: 'M12 22A10 10 0 10 12 2a10 10 0 000 20z M12 6v6l4 2' },
               { title: 'EJECUCIÓN SOBRE PRESENTACIÓN', desc: 'Un diagnóstico solo tiene valor cuando puede convertirse en una ruta de acción.', icon: 'M5 12l5 5L20 7' }
             ].map((p, i) => (
-              <div key={i} className="p-8 border border-slate-700 bg-slate-800/30 rounded-xl hover:bg-slate-800/50 transition-colors">
+              <div key={i} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)] p-8 border border-slate-700 bg-slate-800/30 rounded-xl hover:bg-slate-800/50 transition-colors flex-grow-0">
                 <svg className="w-8 h-8 text-rauvia-gold mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d={p.icon} />
                 </svg>
