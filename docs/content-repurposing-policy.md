@@ -1,9 +1,4 @@
-# Política de Reutilización de Contenido (Sin Duplicación)
+# Política de Reutilización de Contenidos
 
-## Flujo Recomendado
-1. **Fuente:** Artículo pilar publicado en `rauvia.com.mx/recursos`.
-2. **Derivado 1:** Carrusel de LinkedIn (Resumen visual) - Enlaza a la fuente en comentarios.
-3. **Derivado 2:** Publicación de texto en perfil del fundador (Reflexión sobre el problema).
-4. **Derivado 3:** FAQ en GBP.
-
-*Regla de Oro: Toda pieza larga vive en el sitio web; las redes distribuyen el contexto.*
+- **De Pilar a LinkedIn:** Extraer un problema y un fragmento técnico sin contexto excesivo.
+- La fuente principal debe permanecer en rauvia.com.mx.

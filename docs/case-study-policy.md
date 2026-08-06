@@ -1,12 +1,5 @@
-# Política de Casos de Éxito y Evidencia
+# Política de Casos y Ejemplos
 
-## Clasificación
-Para proteger acuerdos de confidencialidad, RAUVIA utilizará:
-1. **Caso Anonimizado (Uso Primario):** Describe el problema real, la industria, el tamaño de la empresa y la solución, pero omite nombre y cifras confidenciales exactas (se usan porcentajes o rangos). 
-2. **Caso Autorizado:** Cliente público. Requiere firma de liberación.
-
-## Estructura Obligatoria del Caso
-- **Contexto:** Industria, problema de origen (síntomas).
-- **Diagnóstico (AETHRYON):** Lo que descubrió el sistema.
-- **Intervención:** Qué se diseñó y construyó.
-- **Resultado Operativo:** Entregables y mejora de capacidades.
+- **Casos Anonimizados:** Usados para proteger a clientes reales (indicando "Ejemplo de caso de empresa manufacturera").
+- **Ejemplos Compuestos:** Para ilustrar problemas frecuentes, dejando claro que es una ilustración didáctica.
+- Nunca inventar métricas y atribuirlas a casos reales sin autorización.

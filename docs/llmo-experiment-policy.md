@@ -1,5 +1,4 @@
-# Política de Experimentación LLMO
+# Política de Experimentos
 
-- **Regla de Oro:** Todo cambio en la web o en el `llms-full.txt` motivado por LLMO debe tener una Hipótesis registrada en `data/llmo-experiments.json`.
-- **Sin Cloaking:** No mostrar contenido distinto a bots vs usuarios.
-- **Aislamiento:** No realizar cambios semánticos críticos en la misma página simultáneamente (ej. cambiar H1 y schema de Organization al mismo tiempo si queremos medir cuál tuvo impacto).
+- Registrar cada prueba en `data/llmo-experiments.json`.
+- Estados: proposed, approved, active, measuring, completed.

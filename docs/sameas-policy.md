@@ -1,8 +1,4 @@
-# Política de Validación SameAs
+# Política SameAs
 
-## Entidad Organization
-- URLs Permitidas: LinkedIn oficial de la empresa, Crunchbase (si aplica), Perfil de GitHub oficial.
-- Prohibidas: Directorios de baja calidad, redes no gestionadas (ej. un Twitter inactivo).
-
-## Acción Manual Pendiente
-- Agregar a `src/config/entity.ts` las URLs de redes sociales una vez confirmadas y auditadas.
+Solo se incluirán URLs confirmadas en el array `sameAs` del schema JSON-LD.
+- No se incluirán directorios genéricos ni perfiles personales no profesionales.

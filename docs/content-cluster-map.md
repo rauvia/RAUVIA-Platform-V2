@@ -1,10 +1,9 @@
-# Mapa de Contenidos Satélite
+# Arquitectura de Contenidos Satélite
 
-## Clúster: Sistemas Comerciales
-1. **Satélite:** "Qué debe existir antes de contratar un CRM" (Procedimiento / Límites).
-2. **Satélite:** "Responsabilidad de oportunidades: Marketing vs Ventas" (Concepto).
-3. **Satélite:** "Por qué los prospectos se enfrían en B2B" (Problema).
-
-## Clúster: Crecimiento Estructural
-1. **Satélite:** "Capacidad operativa vs Estructura organizativa" (Comparación).
-2. **Satélite:** "Señales de que tu empresa necesita arquitectura operativa" (Diagnóstico).
+- **Pilar:** Sistemas Comerciales.
+  - Satélite 1: Qué debe existir antes de un CRM.
+  - Satélite 2: Por qué los prospectos no avanzan.
+  - Satélite 3: Captación vs Conversión estructural.
+- **Pilar:** Arquitectura Operativa.
+  - Satélite 1: Herramientas vs Capacidades.
+  - Satélite 2: Cuando automatizar es un error.

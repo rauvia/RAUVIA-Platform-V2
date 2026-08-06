@@ -3,9 +3,11 @@
 
 User-agent: *
 Allow: /
-Disallow: /wp-admin/
-Disallow: /wp-login.php
-Disallow: /wp-includes/
+Allow: /blog/
+Disallow: /blog/wp-admin/
+Allow: /blog/wp-admin/admin-ajax.php
+Disallow: /blog/wp-login.php
+Disallow: /blog/wp-includes/
 Disallow: /*?s=
 Disallow: /preview/
 Disallow: /drafts/
@@ -13,13 +15,10 @@ Disallow: /drafts/
 # Ensure all AI and LLM bots can access the substantive content
 User-agent: Googlebot
 Allow: /
-
 User-agent: Bingbot
 Allow: /
-
 User-agent: OAI-SearchBot
 Allow: /
-
 User-agent: ChatGPT-User
 Allow: /
 

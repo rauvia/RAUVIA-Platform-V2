@@ -1,8 +1,5 @@
-# Política de Autoría y Confianza
+# Política de Autoría
 
-1. **Atribución Real:** Todo artículo de profundidad (Pilar, Satélite) debe tener un autor humano (Ej. Raúl Morales o un experto consultor del equipo).
-2. **Sin Autoría Fantasma:** No se publicarán artículos bajo el nombre genérico "Equipo RAUVIA" cuando expresen opiniones técnicas complejas, a menos que sea un comunicado institucional.
-3. **Firma (Bylines):** 
-   - Nombre: [Nombre del Autor]
-   - Cargo: [Rol en RAUVIA]
-   - Fecha de última actualización visible para el lector y los bots (JSON-LD `dateModified`).
+- Todo contenido debe tener un Autor asignado.
+- Por defecto, contenido estratégico será firmado por "Raúl Morales".
+- El Author Schema debe vincularse a la entidad Person creada en Fase 2.

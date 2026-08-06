@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const srcPath = path.resolve(__dirname, '../src');
 
 let errors = 0;
 
@@ -16,41 +17,34 @@ function assert(condition, message) {
   }
 }
 
-console.log("Iniciando Auditoría de Entidades y JSON-LD...");
+console.log("Iniciando Auditoría de Entidades (Fase 2)...");
 
-const entityConfigPath = path.join(__dirname, '../src/config/entity.ts');
+// 1. Verificación de Data de Entidad Centralizada
+const entityConfigPath = path.join(srcPath, 'config/entity.ts');
 assert(fs.existsSync(entityConfigPath), "Debe existir src/config/entity.ts");
 
-const homePagePath = path.join(__dirname, '../src/pages/HomePage.tsx');
-const nosotrosPagePath = path.join(__dirname, '../src/pages/NosotrosPage.tsx');
-const solucionesPagePath = path.join(__dirname, '../src/pages/SolucionesPage.tsx');
-const aethryonPagePath = path.join(__dirname, '../src/pages/AethryonPage.tsx');
+if (fs.existsSync(entityConfigPath)) {
+  const content = fs.readFileSync(entityConfigPath, 'utf8');
+  assert(content.includes('RAUVIA CONSULTORIA Y DESARROLLO TECNOLOGICO'), "Debe incluir la razón social oficial");
+  assert(content.includes('Raúl Morales'), "Debe incluir al fundador");
+  assert(content.includes('AETHRYON'), "Debe incluir la entidad AETHRYON");
+  assert(content.includes('https://rauvia.com.mx/#organization'), "Debe definir ID para Organization");
+}
+
+// 2. Verificación de JsonLd.tsx
+const jsonLdPath = path.join(srcPath, 'components/JsonLd.tsx');
+assert(fs.existsSync(jsonLdPath), "Debe existir src/components/JsonLd.tsx");
+if (fs.existsSync(jsonLdPath)) {
+  const content = fs.readFileSync(jsonLdPath, 'utf8');
+  assert(content.includes('Organization') || content.includes('ENTITIES.organization'), "JsonLd debe incluir Organization");
+}
+
+// 3. Verificación del llms.txt actualizado
 const llmsPath = path.join(__dirname, '../public/llms.txt');
-
-if (fs.existsSync(homePagePath)) {
-  const content = fs.readFileSync(homePagePath, 'utf8');
-  assert(content.includes('RAUVIA_ENTITY'), "HomePage debe importar RAUVIA_ENTITY");
-  assert(content.includes('https://rauvia.com.mx/#organization'), "HomePage debe definir el ID estable de Organization");
-}
-
-if (fs.existsSync(nosotrosPagePath)) {
-  const content = fs.readFileSync(nosotrosPagePath, 'utf8');
-  assert(content.includes('AboutPage'), "NosotrosPage debe definir AboutPage");
-}
-
-if (fs.existsSync(solucionesPagePath)) {
-  const content = fs.readFileSync(solucionesPagePath, 'utf8');
-  assert(content.includes('CollectionPage'), "SolucionesPage debe definir CollectionPage");
-}
-
-if (fs.existsSync(aethryonPagePath)) {
-  const content = fs.readFileSync(aethryonPagePath, 'utf8');
-  assert(content.includes('https://rauvia.com.mx/aethryon/#entity'), "AethryonPage debe definir el Thing AETHRYON de forma estable");
-}
-
 if (fs.existsSync(llmsPath)) {
   const content = fs.readFileSync(llmsPath, 'utf8');
-  assert(content.includes('Raúl Morales'), "llms.txt debe mencionar a Raúl Morales como fundador");
+  assert(content.includes('RAUVIA CONSULTORIA Y DESARROLLO TECNOLOGICO'), "llms.txt debe tener la razón social");
+  assert(!content.includes('agencia de marketing'), "llms.txt no debe identificarla erróneamente como agencia de marketing");
 }
 
 if (errors > 0) {

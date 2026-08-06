@@ -1,5 +1,5 @@
-# Roadmap de Autoridad (90 Días)
+# Plan de Autoridad de 90 Días
 
-- **Mes 1:** Auditoría y unificación de perfiles sociales. Publicación de 1 activo citable.
-- **Mes 2:** Activación de estrategia de distribución (LinkedIn) con extractos de los artículos.
-- **Mes 3:** Primera prueba oficial de observabilidad IA y Digital PR ligero (1 podcast/entrevista).
+- **Semana 1-4:** Corrección de perfiles existentes, publicación de mensajes unificados.
+- **Semana 5-8:** Lanzamiento de primer Activo Citable.
+- **Semana 9-12:** Observabilidad en IA inicial y ajustes.

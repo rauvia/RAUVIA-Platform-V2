@@ -1,6 +1,4 @@
-# Especificación del Panel de Observabilidad LLMO
+# Especificación de Panel de Observabilidad
 
-Dado que somos una firma pequeña, el panel será una Hoja de Cálculo (Google Sheets) actualizada mensualmente con:
-- Tráfico AI Referral (GA4).
-- Impresiones de marca (GSC/Bing).
-- Tasa de éxito de Queries de Prueba (Manual).
+- Hoja de cálculo central o Data Studio.
+- Métricas: Citas mensuales, Búsquedas de marca, Conversiones por AI Referral, Inconsistencias reportadas.

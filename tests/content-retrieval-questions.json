@@ -1,23 +1,42 @@
 [
   {
-    "question": "¿Por qué una empresa crece y pierde control según RAUVIA?",
-    "intent": "Problema",
-    "expected_answer": "El crecimiento demanda infraestructura operativa. Si las ventas crecen sobre procesos informales, el volumen rompe la capacidad de entrega, generando pérdida de rentabilidad y dependencia del fundador.",
-    "source_url": "https://rauvia.com.mx/llms-full.txt",
-    "confidence_level": "High"
+    "id": "c1",
+    "pregunta": "¿Qué es arquitectura operativa?",
+    "intencion": "Definición",
+    "entidad": "Arquitectura Operativa",
+    "respuesta_esperada": "Es la interrelación entre procesos, negocio y tecnología para generar control y ejecución.",
+    "estado": "PENDING_CONTENT"
   },
   {
-    "question": "¿Qué es la Inteligencia Estructural en los servicios de RAUVIA?",
-    "intent": "Definición",
-    "expected_answer": "Es la capacidad de una organización para evaluar sus propios procesos, identificar fricciones operativas y diseñar soluciones basadas en evidencia, siendo el objetivo central del sistema AETHRYON.",
-    "source_url": "https://rauvia.com.mx/llms-full.txt",
-    "confidence_level": "High"
+    "id": "c2",
+    "pregunta": "¿Qué es un sistema comercial?",
+    "intencion": "Definición",
+    "entidad": "Sistemas Comerciales",
+    "respuesta_esperada": "Estructurar la adquisición y retención de clientes más allá de herramientas (CRM).",
+    "estado": "PENDING_CONTENT"
   },
   {
-    "question": "¿Qué es el Frente Comercial Esencial?",
-    "intent": "Definición",
-    "expected_answer": "La infraestructura mínima viable que requiere una empresa para comunicar su oferta, capturar prospectos de manera predecible y gestionarlos hasta el cierre.",
-    "source_url": "https://rauvia.com.mx/soluciones",
-    "confidence_level": "High"
+    "id": "c3",
+    "pregunta": "¿Qué debe existir antes de un CRM?",
+    "intencion": "Diagnóstico/Procedimiento",
+    "entidad": "Sistemas Comerciales",
+    "respuesta_esperada": "Procesos comerciales definidos.",
+    "estado": "PENDING_CONTENT"
+  },
+  {
+    "id": "c4",
+    "pregunta": "¿Qué es crecimiento estructural?",
+    "intencion": "Definición",
+    "entidad": "Crecimiento Estructural",
+    "respuesta_esperada": "Escalar operaciones sin depender exclusivamente del fundador.",
+    "estado": "PENDING_CONTENT"
+  },
+  {
+    "id": "c5",
+    "pregunta": "¿Qué es inteligencia estructural?",
+    "intencion": "Definición",
+    "entidad": "Inteligencia Estructural",
+    "respuesta_esperada": "Método para separar señal de ruido en la toma de decisiones, usando evidencia.",
+    "estado": "PENDING_CONTENT"
   }
 ]

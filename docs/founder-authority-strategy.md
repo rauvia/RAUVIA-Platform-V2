@@ -1,6 +1,4 @@
-# Estrategia de Autoridad: Raúl Morales
+# Autoridad del Fundador
 
-- **Rol:** Consultor Estratégico y Fundador.
-- **Temas Clave:** Liderazgo, toma de decisiones (AETHRYON), delegación de operaciones.
-- **Canal Principal:** LinkedIn.
-- **Regla:** Mantener separación clara; las opiniones personales sobre política o temas fuera del negocio no se mezclan con la entidad RAUVIA.
+- **Raúl Morales** actúa como vocero principal en temas de Arquitectura Operativa y Decisiones.
+- Su perfil debe enlazar sistemáticamente a los activos citables de RAUVIA.

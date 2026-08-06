@@ -1,26 +1,36 @@
-export const RAUVIA_ENTITY = {
-  name: "RAUVIA",
-  legalName: "RAUVIA CONSULTORIA Y DESARROLLO TECNOLOGICO",
-  alternateName: "RAUVIA Consulting",
-  url: "https://rauvia.com.mx",
-  logo: "https://rauvia.com.mx/media/og-image.jpg",
-  description: "RAUVIA es una firma mexicana de consultoría estratégica y desarrollo tecnológico que diseña sistemas comerciales, estructuras operativas y activos digitales para empresas que necesitan crecer con mayor claridad, control y capacidad de ejecución.",
-  shortDescription: "Firma de consultoría y desarrollo tecnológico que construye sistemas comerciales y estructuras operativas para escalar empresas con claridad y control.",
-  foundingDate: "2020", // placeholder or general, omitting if unverified
+export const ENTITIES = {
+  organization: {
+    "@id": "https://rauvia.com.mx/#organization",
+    name: "RAUVIA",
+    legalName: "RAUVIA CONSULTORIA Y DESARROLLO TECNOLOGICO",
+    url: "https://rauvia.com.mx",
+    logo: "https://rauvia.com.mx/media/RAUVIA_CONSULTING_LOGO.png",
+    description: "Firma mexicana de consultoría estratégica y desarrollo tecnológico que diseña sistemas comerciales, estructuras operativas y activos digitales para empresas que necesitan crecer con mayor claridad, control y capacidad de ejecución.",
+    sameAs: [
+      // "https://www.linkedin.com/company/rauvia" // Pendiente de validación oficial (Acción Manual)
+    ]
+  },
+  website: {
+    "@id": "https://rauvia.com.mx/#website",
+    name: "RAUVIA",
+    url: "https://rauvia.com.mx"
+  },
   founder: {
-    "@type": "Person",
+    "@id": "https://rauvia.com.mx/#founder",
     name: "Raúl Morales",
     jobTitle: "Fundador y Consultor Estratégico",
-    description: "Consultor estratégico con experiencia en análisis de negocio, transformación digital, arquitectura funcional y ejecución operativa."
+    url: "https://rauvia.com.mx/nosotros",
+    sameAs: [
+      // "https://www.linkedin.com/in/raul-morales-rauvia" // Pendiente de validación (Acción Manual)
+    ]
   },
-  sameAs: [
-    // External profiles should go here once verified, e.g., LinkedIn
-  ]
+  system: {
+    "@id": "https://rauvia.com.mx/aethryon/#entity",
+    name: "AETHRYON",
+    description: "Sistema de análisis y convergencia desarrollado por RAUVIA para estructurar decisiones.",
+    url: "https://rauvia.com.mx/aethryon"
+  }
 };
 
-export const AETHRYON_ENTITY = {
-  name: "AETHRYON",
-  type: "System",
-  description: "AETHRYON es el sistema de análisis y convergencia desarrollado por RAUVIA para interpretar señales, identificar fricción, evaluar oportunidades y estructurar decisiones ejecutables.",
-  url: "https://rauvia.com.mx/aethryon"
-};
+export const RAUVIA_ENTITY = ENTITIES.organization;
+export const AETHRYON_ENTITY = ENTITIES.system;

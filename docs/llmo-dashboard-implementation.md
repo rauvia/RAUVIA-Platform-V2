@@ -1,8 +1,3 @@
-# Panel de Control Operativo (Dashboard)
+# Implementación de Panel de Observabilidad
 
-Se utilizará una Hoja de Cálculo (Google Sheets) o un reporte de Looker Studio conectado a GA4 y GSC.
-**Métricas Visibles:**
-- Sesiones AI Referral.
-- Consultas de Marca (GSC).
-- Citas Registradas (Manual).
-- Tasa de Precisión de Entidad.
+- Sistema ligero (Google Sheets / Data Studio / JSON) que cruza: Citas, Tráfico Referral, Conversiones y Experimentos activos.

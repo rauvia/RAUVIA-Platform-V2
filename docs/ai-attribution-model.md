@@ -1,9 +1,4 @@
-# Modelo de Atribución de IA
+# Modelo de Atribución AI Referral
 
-## Convenciones UTM (Opcional para enlaces en perfiles sociales)
-- `utm_source=linkedin`
-- `utm_medium=social`
-- `utm_campaign=authority_distribution`
-
-## AI Referrals
-- Fuentes como `perplexity.ai`, `chatgpt.com`, `claude.ai` deben ser etiquetadas en Google Analytics 4 bajo el grupo de canales personalizado "AI Assistants".
+- Seguimiento de tráfico con UTMs de referers conocidos de IA (Perplexity, ChatGPT).
+- Convención: `utm_source=chatgpt&utm_medium=ai_referral`.

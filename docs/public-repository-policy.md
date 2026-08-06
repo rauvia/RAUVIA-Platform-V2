@@ -1,9 +1,4 @@
-# Política de Repositorios y GitHub
+# Política de Repositorios Públicos
 
-## Contenido Publicable
-- Scripts de auditoría SEO/LLMO de código abierto.
-- Plantillas de JSON-LD genéricas.
-
-## Prohibido
-- Lógica de AETHRYON.
-- Credentials, env vars, o listas de clientes.
+- GitHub puede usarse para: checklists técnicos, scripts de auditoría SEO pública, ejemplos de schema.
+- No publicar código propietario ni indicadores de AETHRYON.

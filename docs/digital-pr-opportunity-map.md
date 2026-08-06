@@ -1,7 +1,5 @@
-# Mapa de Oportunidades Digital PR
+# Digital PR - Oportunidades
 
-| Oportunidad | Audiencia | Riesgo | Prioridad |
-|-------------|-----------|--------|-----------|
-| Podcast de negocios B2B (México) | Directores, CEOs | Bajo | Alta |
-| Publicación invitada en medio tech/business | Tomadores de decisión | Medio | Media |
-| Participación en asociaciones (ej. COPARMEX) | Empresarios | Bajo | Alta |
+- Participación en podcasts de negocios B2B.
+- Artículos técnicos en plataformas de desarrollo y negocios en México.
+- (Acciones pendientes de aprobación manual).

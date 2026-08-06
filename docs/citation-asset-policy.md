@@ -1,3 +1,4 @@
-# Política de Activos de Citación
+# Política de Archivos de Citación
 
-Actualmente no requerimos un `/citation` académico, pero todo artículo de profundidad y recurso contará con autoría clara, fecha de modificación visible, y enlaces canónicos. Si se liberan herramientas open-source en GitHub, incluirán un `CITATION.cff`.
+- Recursos en GitHub incluirán un `CITATION.cff`.
+- Páginas de estudios técnicos tendrán una sección visible "¿Cómo citar este recurso?".
