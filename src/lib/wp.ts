@@ -34,6 +34,18 @@ export interface WPPost {
 
 export async function getPosts(): Promise<WPPost[]> {
   try {
+    const proxyRes = await fetch('/api/wp/posts');
+    if (proxyRes.ok) {
+      const data = await proxyRes.json();
+      if (Array.isArray(data) && data.length > 0) {
+        return data;
+      }
+    }
+  } catch (e) {
+    // Proxy fetch failed, fall back
+  }
+
+  try {
     const response = await fetch(`${WP_CONFIG.endpoints.posts}?_embed&status=publish`);
     if (!response.ok) throw new Error('Failed to fetch posts');
     return await response.json();
@@ -44,6 +56,18 @@ export async function getPosts(): Promise<WPPost[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
+  try {
+    const proxyRes = await fetch(`/api/wp/posts?slug=${encodeURIComponent(slug)}`);
+    if (proxyRes.ok) {
+      const posts = await proxyRes.json();
+      if (Array.isArray(posts) && posts.length > 0) {
+        return posts[0];
+      }
+    }
+  } catch (e) {
+    // Proxy fetch failed, fall back
+  }
+
   try {
     const response = await fetch(`${WP_CONFIG.endpoints.posts}?slug=${slug}&_embed&status=publish`);
     if (!response.ok) throw new Error('Failed to fetch post');

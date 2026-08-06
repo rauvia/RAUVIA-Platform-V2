@@ -20,6 +20,23 @@ const routes = [
 
 async function startServer() {
   const app = express();
+  
+  app.get('/api/wp/posts', async (req, res) => {
+    try {
+      const slug = req.query.slug;
+      const wpUrl = slug
+        ? `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
+        : `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?_embed&status=publish`;
+
+      const wpRes = await fetch(wpUrl);
+      if (!wpRes.ok) return res.status(wpRes.status).json([]);
+      const data = await wpRes.json();
+      res.json(data);
+    } catch (e) {
+      res.status(500).json([]);
+    }
+  });
+
   app.use(express.static(distPath));
   
   app.get('*', (req, res) => {

@@ -8,6 +8,26 @@ async function startServer() {
 
   app.use(express.json());
 
+  // WP Posts Proxy Route
+  app.get('/api/wp/posts', async (req, res) => {
+    try {
+      const slug = req.query.slug as string | undefined;
+      const wpUrl = slug
+        ? `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
+        : `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?_embed&status=publish`;
+
+      const wpRes = await fetch(wpUrl);
+      if (!wpRes.ok) {
+        return res.status(wpRes.status).json({ error: 'Failed to fetch from WordPress' });
+      }
+      const data = await wpRes.json();
+      res.json(data);
+    } catch (err) {
+      console.error('Error proxying WP posts:', err);
+      res.status(500).json({ error: 'Internal server error proxying WP' });
+    }
+  });
+
   // LLM / LLMO API Endpoint
   // Prepared for Gemini API integration with RAUVIA context
   app.post('/api/llm', async (req, res) => {
@@ -49,9 +69,9 @@ async function startServer() {
     app.use(express.static(distPath, { extensions: ['html'] }));
     
     // Serve prerendered routes if they exist, or fallback to index
-    const knownRoutes = ['/', '/nosotros', '/soluciones', '/aethryon'];
+    const knownRoutes = ['/', '/nosotros', '/soluciones', '/aethryon', '/recursos'];
     app.get('*', (req, res) => {
-      if (knownRoutes.includes(req.path)) {
+      if (knownRoutes.includes(req.path) || req.path.startsWith('/recursos/')) {
         res.sendFile(path.join(distPath, 'index.html'));
       } else {
         res.status(404).sendFile(path.join(distPath, '404.html'), (err) => {
