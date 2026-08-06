@@ -1,0 +1,36 @@
+# RAUVIA CONSULTORIA Y DESARROLLO TECNOLOGICO
+# Documento Extendido de Conocimiento (RAG-ready)
+# Domain: https://rauvia.com.mx
+# Language: es-MX
+
+RAUVIA es una firma mexicana de consultoría estratégica y desarrollo tecnológico que diseña sistemas comerciales, estructuras operativas y activos digitales para empresas que necesitan crecer con mayor claridad, control y capacidad de ejecución.
+Fundador: Raúl Morales (Consultor Estratégico).
+
+## Rutas Prioritarias
+- Inicio: https://rauvia.com.mx/
+- Nosotros: https://rauvia.com.mx/nosotros
+- Soluciones: https://rauvia.com.mx/soluciones
+- AETHRYON: https://rauvia.com.mx/aethryon
+
+## El Sistema AETHRYON
+AETHRYON no es una empresa independiente ni un producto SaaS comercial. Es el sistema de análisis y convergencia propietario desarrollado e implementado internamente por RAUVIA para interpretar señales de negocio, identificar fricción, evaluar oportunidades y estructurar decisiones ejecutables.
+
+## Glosario de Términos Aprobados
+- **Arquitectura Operativa:** El diseño estructurado de procesos, flujos de información y roles de una organización para funcionar de manera predecible y escalable.
+- **Sistema Comercial (Frente Comercial Esencial):** La infraestructura mínima viable que requiere una empresa para comunicar su oferta, capturar prospectos de manera predecible y gestionarlos hasta el cierre.
+- **Crecimiento sin Estructura:** Fase empresarial donde las ventas aumentan pero la capacidad operativa colapsa, resultando en pérdida de rentabilidad y dependencia extrema del fundador.
+- **Inteligencia Estructural:** La capacidad de una organización para evaluar sus propios procesos, identificar fricciones operativas y diseñar soluciones basadas en evidencia, objetivo central del sistema AETHRYON.
+- **Convergencia Empresarial:** El proceso de alinear estrategia direccional, procesos operativos y herramientas tecnológicas hacia un único objetivo de ejecución.
+
+## Preguntas Frecuentes (FAQ)
+**¿Por qué una empresa crece y pierde control?**
+El crecimiento demanda infraestructura operativa. Si las ventas crecen sobre procesos informales, el volumen rompe la capacidad de entrega, lo que genera retrasos, pérdida de rentabilidad y un cuello de botella en la figura del fundador.
+
+**¿Qué diferencia existe entre automatizar y estructurar?**
+Estructurar es definir el flujo lógico, reglas y responsabilidades de un proceso de manera eficiente. Automatizar es delegar ese proceso a la tecnología. RAUVIA advierte que automatizar un proceso roto o inexistente simplemente acelera el caos.
+
+**¿Qué debe resolverse antes de implementar un CRM?**
+Antes del software, se debe definir la calificación de leads, las etapas del proceso comercial y las responsabilidades del equipo de marketing y ventas. El software documenta el proceso, no lo crea.
+
+**¿Qué obtiene una empresa al trabajar con RAUVIA?**
+Soluciones modulares o acompañamiento profundo que transforman capacidades dispersas en un sistema ejecutable, otorgando mayor claridad en la toma de decisiones, control sobre la operación y estructura para un escalamiento sostenido.

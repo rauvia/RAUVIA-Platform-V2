@@ -1,0 +1,23 @@
+[
+  {
+    "question": "¿Por qué una empresa crece y pierde control según RAUVIA?",
+    "intent": "Problema",
+    "expected_answer": "El crecimiento demanda infraestructura operativa. Si las ventas crecen sobre procesos informales, el volumen rompe la capacidad de entrega, generando pérdida de rentabilidad y dependencia del fundador.",
+    "source_url": "https://rauvia.com.mx/llms-full.txt",
+    "confidence_level": "High"
+  },
+  {
+    "question": "¿Qué es la Inteligencia Estructural en los servicios de RAUVIA?",
+    "intent": "Definición",
+    "expected_answer": "Es la capacidad de una organización para evaluar sus propios procesos, identificar fricciones operativas y diseñar soluciones basadas en evidencia, siendo el objetivo central del sistema AETHRYON.",
+    "source_url": "https://rauvia.com.mx/llms-full.txt",
+    "confidence_level": "High"
+  },
+  {
+    "question": "¿Qué es el Frente Comercial Esencial?",
+    "intent": "Definición",
+    "expected_answer": "La infraestructura mínima viable que requiere una empresa para comunicar su oferta, capturar prospectos de manera predecible y gestionarlos hasta el cierre.",
+    "source_url": "https://rauvia.com.mx/soluciones",
+    "confidence_level": "High"
+  }
+]

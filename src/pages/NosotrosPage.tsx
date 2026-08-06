@@ -1,16 +1,35 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { RAUVIA_ENTITY } from '../config/entity';
 import { Link } from 'react-router-dom';
 import { ArrowRight, PlayCircle, ShieldCheck, Target, Layers, Settings, BarChart3, TrendingUp, Hexagon } from 'lucide-react';
 import FadeInUp from '../components/FadeInUp';
 import Footer from '../components/Footer';
 
 export default function NosotrosPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://rauvia.com.mx/nosotros/#webpage",
+    "url": "https://rauvia.com.mx/nosotros",
+    "name": "Nosotros - " + RAUVIA_ENTITY.name,
+    "description": RAUVIA_ENTITY.shortDescription,
+    "publisher": {
+      "@id": "https://rauvia.com.mx/#organization"
+    },
+    "mainEntity": {
+      "@id": "https://rauvia.com.mx/#organization"
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>RAUVIA Consulting | Nosotros</title>
-        <meta name="description" content="RAUVIA es una firma de consultoría y desarrollo tecnológico que conecta estrategia, procesos, tecnología y ejecución." />
-      </Helmet>
+      <SEO 
+        title="RAUVIA Consulting | Nosotros"
+        description="RAUVIA es una firma de consultoría y desarrollo tecnológico que conecta estrategia, procesos, tecnología y ejecución."
+        canonicalUrl="/nosotros"
+      />
+      <JsonLd data={structuredData} />
 
       {/* SECCIÓN 1 — HERO */}
       <section className="pt-32 pb-20 overflow-hidden relative">

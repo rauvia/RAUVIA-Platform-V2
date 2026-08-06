@@ -1,15 +1,37 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { RAUVIA_ENTITY, AETHRYON_ENTITY } from '../config/entity';
 import { ArrowRight, Target, Hexagon, Filter, Route, Box, AlertCircle, TrendingUp, Compass, Network, Activity, FileText, CheckCircle2, ChevronDown, MonitorPlay } from 'lucide-react';
 import FadeInUp from '../components/FadeInUp';
 import Footer from '../components/Footer';
 
 export default function AethryonPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://rauvia.com.mx/aethryon/#webpage",
+    "name": AETHRYON_ENTITY.name + " - " + RAUVIA_ENTITY.name,
+    "url": AETHRYON_ENTITY.url,
+    "description": AETHRYON_ENTITY.description,
+    "publisher": {
+      "@id": "https://rauvia.com.mx/#organization"
+    },
+    "mainEntity": {
+      "@type": "Thing",
+      "@id": "https://rauvia.com.mx/aethryon/#entity",
+      "name": AETHRYON_ENTITY.name,
+      "description": AETHRYON_ENTITY.description
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>RAUVIA Consulting | AETHRYON</title>
-        <meta name="description" content="AETHRYON es el sistema de análisis de RAUVIA para identificar qué está frenando el crecimiento de una empresa y convertirlo en una ruta de acción." />
-      </Helmet>
+      <SEO 
+        title="RAUVIA Consulting | AETHRYON"
+        description="AETHRYON es el sistema de análisis de RAUVIA para identificar qué está frenando el crecimiento de una empresa y convertirlo en una ruta de acción."
+        canonicalUrl="/aethryon"
+      />
+      <JsonLd data={structuredData} />
 
       {/* SECCIÓN 1 — HERO */}
       <section className="pt-32 pb-20 overflow-hidden relative bg-rauvia-bg">

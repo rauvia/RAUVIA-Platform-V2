@@ -1,4 +1,6 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { RAUVIA_ENTITY } from '../config/entity';
 import FadeInUp from '../components/FadeInUp';
 import HeroSection from '../components/HeroSection';
 import ProblemSection from '../components/ProblemSection';
@@ -10,30 +12,37 @@ import Footer from '../components/Footer';
 export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "RAUVIA Consulting",
-    "url": "https://www.rauvia.com.mx",
-    "logo": "https://www.rauvia.com.mx/logo.png",
-    "description": "Consultoría y Desarrollo Tecnológico. Diseñamos activos digitales, sistemas comerciales y estructuras operativas para empresas que necesitan crecer con claridad y control.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Ciudad de México",
-      "addressRegion": "CDMX",
-      "addressCountry": "MX"
-    },
-    "slogan": "Tecnología del futuro para operaciones reales.",
-    "knowsAbout": ["Estrategia Digital", "Sistemas Comerciales", "Desarrollo Tecnológico", "Automatización", "Datos y Analytics"]
+    "@type": "Organization",
+    "@id": "https://rauvia.com.mx/#organization",
+    "name": RAUVIA_ENTITY.legalName,
+    "alternateName": RAUVIA_ENTITY.name,
+    "url": RAUVIA_ENTITY.url,
+    "logo": RAUVIA_ENTITY.logo,
+    "description": RAUVIA_ENTITY.description,
+    "founder": RAUVIA_ENTITY.founder,
+    "sameAs": RAUVIA_ENTITY.sameAs
+  };
+
+  const webSiteData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://rauvia.com.mx/#website",
+    "name": RAUVIA_ENTITY.name,
+    "url": RAUVIA_ENTITY.url,
+    "publisher": {
+      "@id": "https://rauvia.com.mx/#organization"
+    }
   };
 
   return (
     <>
-      <Helmet>
-        <title>RAUVIA Consulting | Tecnología del futuro para operaciones reales</title>
-        <meta name="description" content="Diseñamos activos digitales, sistemas comerciales y estructuras operativas para empresas que necesitan crecer con claridad y control." />
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEO 
+        title="RAUVIA Consulting | Tecnología del futuro para operaciones reales"
+        description="Diseñamos activos digitales, sistemas comerciales y estructuras operativas para empresas que necesitan crecer con claridad y control."
+        canonicalUrl="/"
+      />
+      <JsonLd data={structuredData} />
+      <JsonLd data={webSiteData} />
       
       <FadeInUp>
         <HeroSection />

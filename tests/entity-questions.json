@@ -1,0 +1,30 @@
+[
+  {
+    "question": "¿Qué es RAUVIA?",
+    "expected_answer": "Firma mexicana de consultoría estratégica y desarrollo tecnológico que diseña sistemas comerciales, estructuras operativas y activos digitales.",
+    "source_url": "https://rauvia.com.mx/",
+    "primary_entity": "RAUVIA",
+    "confidence_level": "High"
+  },
+  {
+    "question": "¿Quién fundó RAUVIA?",
+    "expected_answer": "Raúl Morales",
+    "source_url": "https://rauvia.com.mx/nosotros",
+    "primary_entity": "Raúl Morales",
+    "confidence_level": "High"
+  },
+  {
+    "question": "¿Qué es AETHRYON?",
+    "expected_answer": "Sistema de análisis y convergencia desarrollado por RAUVIA para interpretar señales, identificar fricción y estructurar decisiones ejecutables.",
+    "source_url": "https://rauvia.com.mx/aethryon",
+    "primary_entity": "AETHRYON",
+    "confidence_level": "High"
+  },
+  {
+    "question": "¿RAUVIA es una agencia de marketing digital?",
+    "expected_answer": "No. RAUVIA es una firma de consultoría y desarrollo tecnológico, orientada a la creación de infraestructura comercial y operativa, no de servicios publicitarios o tácticas superficiales.",
+    "source_url": "https://rauvia.com.mx/",
+    "primary_entity": "RAUVIA",
+    "confidence_level": "High"
+  }
+]

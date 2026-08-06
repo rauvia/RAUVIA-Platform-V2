@@ -44,9 +44,20 @@ async function startServer() {
   } else {
     // Production static serving
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    
+    // Serve static files
+    app.use(express.static(distPath, { extensions: ['html'] }));
+    
+    // Serve prerendered routes if they exist, or fallback to index
+    const knownRoutes = ['/', '/nosotros', '/soluciones', '/aethryon'];
     app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+      if (knownRoutes.includes(req.path)) {
+        res.sendFile(path.join(distPath, 'index.html'));
+      } else {
+        res.status(404).sendFile(path.join(distPath, '404.html'), (err) => {
+          if (err) res.status(404).sendFile(path.join(distPath, 'index.html'));
+        });
+      }
     });
   }
 

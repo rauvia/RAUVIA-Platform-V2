@@ -34,7 +34,7 @@ export default function Navbar() {
   const navItems = [
     { name: 'SOLUCIONES', href: '/soluciones' },
     { name: 'AETHRYON', href: '/aethryon' },
-    { name: 'RECURSOS', href: '/#recursos' },
+    { name: 'RECURSOS', href: '/recursos' },
     { name: 'NOSOTROS', href: '/nosotros' }
   ];
 

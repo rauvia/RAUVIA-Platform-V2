@@ -6,6 +6,9 @@ import HomePage from './pages/HomePage';
 import NosotrosPage from './pages/NosotrosPage';
 import SolucionesPage from './pages/SolucionesPage';
 import AethryonPage from './pages/AethryonPage';
+import RecursosPage from './pages/RecursosPage';
+import PostPage from './pages/PostPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -42,6 +45,9 @@ export default function App() {
               <Route path="/nosotros" element={<NosotrosPage />} />
               <Route path="/soluciones" element={<SolucionesPage />} />
               <Route path="/aethryon" element={<AethryonPage />} />
+              <Route path="/recursos" element={<RecursosPage />} />
+              <Route path="/recursos/:slug" element={<PostPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>
           

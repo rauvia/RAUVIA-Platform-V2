@@ -1,0 +1,4 @@
+source,destination,type,status,reason,verified,owner
+/contacto-anterior/,/contacto,301,pending,migracion_react,no,seo
+/servicios-antiguos/,/soluciones,301,pending,migracion_react,no,seo
+/acerca-de/,/nosotros,301,pending,migracion_react,no,seo

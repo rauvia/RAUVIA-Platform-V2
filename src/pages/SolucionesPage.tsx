@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
+import JsonLd from '../components/JsonLd';
+import { RAUVIA_ENTITY } from '../config/entity';
 import { ArrowRight, Hexagon, Target, CheckCircle2, ChevronDown, ChevronRight, Layers, Box, Cpu, LineChart, Network, Activity, BarChart3, Database, Globe } from 'lucide-react';
 import FadeInUp from '../components/FadeInUp';
 import Footer from '../components/Footer';
@@ -289,12 +291,26 @@ export default function SolucionesPage() {
 
   const currentProducts = assetsData[activeStage as keyof typeof assetsData] || [];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://rauvia.com.mx/soluciones/#webpage",
+    "url": "https://rauvia.com.mx/soluciones",
+    "name": "Portafolio de Soluciones - " + RAUVIA_ENTITY.name,
+    "description": "Catálogo de soluciones empresariales. " + RAUVIA_ENTITY.shortDescription,
+    "publisher": {
+      "@id": "https://rauvia.com.mx/#organization"
+    }
+  };
+
   return (
     <>
-      <Helmet>
-        <title>RAUVIA Consulting | Portafolio de Soluciones</title>
-        <meta name="description" content="Catálogo de soluciones empresariales. RAUVIA construye capacidades que las organizaciones incorporan para resolver etapas específicas de crecimiento." />
-      </Helmet>
+      <SEO 
+        title="RAUVIA Consulting | Portafolio de Soluciones"
+        description="Catálogo de soluciones empresariales. RAUVIA construye capacidades que las organizaciones incorporan para resolver etapas específicas de crecimiento."
+        canonicalUrl="/soluciones"
+      />
+      <JsonLd data={structuredData} />
 
       {/* SECCIÓN 1 — HERO */}
       <section className="pt-32 pb-20 overflow-hidden relative">

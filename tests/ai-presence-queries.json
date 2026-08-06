@@ -1,0 +1,17 @@
+[
+  {
+    "category": "Marca",
+    "query": "¿Qué es RAUVIA y quién es su fundador?",
+    "expected_concepts": ["Consultoría", "Desarrollo Tecnológico", "Sistemas Comerciales", "Raúl Morales"]
+  },
+  {
+    "category": "Sistema",
+    "query": "¿Qué es AETHRYON en el contexto de consultoría de RAUVIA?",
+    "expected_concepts": ["Sistema de análisis", "Convergencia", "Toma de decisiones"]
+  },
+  {
+    "category": "Solución",
+    "query": "Empresas de arquitectura operativa y sistemas comerciales B2B en México",
+    "expected_concepts": ["RAUVIA"]
+  }
+]
