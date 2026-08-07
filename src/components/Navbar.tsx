@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Logo from "./Logo";
@@ -29,6 +30,52 @@ export default function Navbar() {
     return () => {
       document.body.style.overflow = '';
     };
+  }, [isOpen]);
+
+  // Focus trap
+  useEffect(() => {
+    if (!isOpen) return;
+    
+    const panel = panelRef.current;
+    if (!panel) return;
+    
+    const focusableElements = panel.querySelectorAll<HTMLElement>(
+      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+    );
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    const toggleBtn = document.getElementById('menu-toggle-btn');
+    
+    // Focus first element on open
+    if (firstElement) {
+      firstElement.focus();
+    }
+    
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+      
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          toggleBtn?.focus();
+        } else if (document.activeElement === toggleBtn) {
+          e.preventDefault();
+          lastElement?.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          toggleBtn?.focus();
+        } else if (document.activeElement === toggleBtn) {
+          e.preventDefault();
+          firstElement?.focus();
+        }
+      }
+    };
+    
+    document.addEventListener('keydown', handleTab);
+    return () => document.removeEventListener('keydown', handleTab);
   }, [isOpen]);
 
   const navItems = [
@@ -76,10 +123,11 @@ export default function Navbar() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <button 
+              id="menu-toggle-btn"
               className="md:hidden text-rauvia-navy p-2 flex items-center justify-center min-w-[44px] min-h-[44px]"
               onClick={() => setIsOpen(!isOpen)}
               aria-expanded={isOpen}
-              aria-label="Alternar menú"
+              aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -88,8 +136,8 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Panel */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 z-50 flex justify-end">
+      {isOpen && createPortal(
+        <div className="md:hidden fixed inset-0 z-[40] flex justify-end">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-rauvia-navy-dark/40 backdrop-blur-sm"
@@ -100,7 +148,7 @@ export default function Navbar() {
           {/* Panel */}
           <div 
             ref={panelRef}
-            className="relative w-[85%] max-w-sm h-full bg-white shadow-2xl flex flex-col pt-24 px-6 pb-6 overflow-y-auto"
+            className="relative w-[85%] max-w-sm h-[100dvh] bg-white shadow-2xl flex flex-col pt-24 px-6 pb-6 overflow-y-auto"
             role="dialog"
             aria-modal="true"
             aria-label="Menú principal"
@@ -131,7 +179,8 @@ export default function Navbar() {
               </a>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </nav>
   );

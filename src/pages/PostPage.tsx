@@ -126,7 +126,7 @@ export default function PostPage() {
 
           <FadeInUp delay={0.2}>
             <div 
-              className="prose prose-invert prose-rauvia max-w-none prose-img:rounded-lg prose-a:text-rauvia-accent hover:prose-a:text-rauvia-accent/80 prose-headings:font-display prose-headings:font-normal prose-h2:text-3xl prose-h3:text-2xl prose-p:text-rauvia-gray prose-p:leading-relaxed prose-strong:text-rauvia-text prose-li:text-rauvia-gray"
+              className="prose prose-rauvia max-w-none prose-img:rounded-lg prose-a:text-rauvia-accent hover:prose-a:text-rauvia-accent/80 prose-headings:font-display prose-headings:font-normal prose-h2:text-3xl prose-h3:text-2xl prose-p:text-rauvia-gray prose-p:leading-relaxed prose-strong:text-rauvia-text prose-li:text-rauvia-gray"
               dangerouslySetInnerHTML={{ __html: post.content.rendered }}
             />
           </FadeInUp>

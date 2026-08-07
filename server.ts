@@ -15,7 +15,7 @@ async function fetchWPPosts(slug?: string) {
 
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 3000);
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
 
     const wpRes = await fetch(wpUrl, { signal: controller.signal });
     clearTimeout(timeoutId);
@@ -44,9 +44,46 @@ async function fetchWPPosts(slug?: string) {
 
 async function startServer() {
   const app = express();
-  const PORT = 3000;
+  const PORT = process.env.PORT || 3000;
 
   app.use(express.json());
+
+  // Historical legacy 301 redirects to https://rauvia.com.mx/
+  const LEGACY_HISTORICAL_PATHS = new Set([
+    '/sobre-rauvia',
+    '/servicios',
+    '/contacto',
+    '/nuestro-metodo',
+    '/consultoria_gratis',
+    '/test-madurez-sistemica',
+    '/blog',
+    '/blindaje-operativo-2026',
+    '/delegacion-hueca-caos-a-sistema-90-dias',
+    '/metricas-de-rentabilidad-para-agencias-en-cdmx',
+    '/guia-gobernanza-rauvia',
+    '/claridad-operativa-el-regalo-que-si-negocio-necesita',
+    '/ruta-90-dias-agencias',
+    '/diagnostico-de-fuga-de-capital-mejora-la-eficiencia-en-tu-agencia',
+    '/ejecucion-ruta-90-solo-vs-acompanamiento',
+    '/que-hace-rauvia-ruta-90-dias',
+    '/ia-estrategia-contenido-agencias',
+    '/wp-content/uploads/2025/11/RAUVIA_PRESENTACION_GUIA_2025.pdf',
+    '/contacto-anterior',
+    '/servicios-antiguos',
+    '/acerca-de',
+  ]);
+
+  app.use((req, res, next) => {
+    let pathName = req.path;
+    if (pathName.length > 1 && pathName.endsWith('/')) {
+      pathName = pathName.slice(0, -1);
+    }
+
+    if (LEGACY_HISTORICAL_PATHS.has(pathName) || LEGACY_HISTORICAL_PATHS.has(req.path)) {
+      return res.redirect(301, 'https://rauvia.com.mx/');
+    }
+    next();
+  });
 
   // WP Posts Proxy Route
   app.get('/api/wp/posts', async (req, res) => {
@@ -93,7 +130,7 @@ async function startServer() {
     const distPath = path.join(process.cwd(), 'dist');
     
     // Serve static files
-    app.use(express.static(distPath, { extensions: ['html'] }));
+    app.use(express.static(distPath, { extensions: ['html'], redirect: false }));
     
     // Serve prerendered routes if they exist, or fallback to index
     const knownRoutes = ['/', '/nosotros', '/soluciones', '/aethryon', '/recursos'];

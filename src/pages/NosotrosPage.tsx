@@ -68,10 +68,13 @@ export default function NosotrosPage() {
                   HABLAR CON RAUVIA
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <button className="flex items-center justify-center gap-2 text-rauvia-navy hover:text-rauvia-blue px-4 py-3 rounded text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap min-h-[52px]">
+                <Link 
+                  to="/aethryon"
+                  className="flex items-center justify-center gap-2 text-rauvia-navy hover:text-rauvia-blue px-4 py-3 rounded text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap min-h-[52px]"
+                >
                   <PlayCircle className="w-5 h-5 text-rauvia-blue" />
                   CONOCER CÓMO TRABAJAMOS
-                </button>
+                </Link>
               </div>
             </div>
 

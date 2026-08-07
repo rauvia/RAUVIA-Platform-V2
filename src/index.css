@@ -10,6 +10,12 @@
   --color-rauvia-gold: #E6A300;
   --color-rauvia-gold-light: #FFD766;
   
+  --color-rauvia-card: #ffffff;
+  --color-rauvia-border: #e2e8f0;
+  --color-rauvia-text: #0f172a;
+  --color-rauvia-gray: #475569;
+  --color-rauvia-accent: #1E4A74;
+  
   --animate-spin-slow: spin 8s linear infinite;
   --animate-spin-reverse-slow: spin-reverse 12s linear infinite;
 }

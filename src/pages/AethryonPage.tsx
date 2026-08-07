@@ -34,7 +34,7 @@ export default function AethryonPage() {
       <JsonLd data={structuredData} />
 
       {/* SECCIÓN 1 — HERO */}
-      <section className="pt-32 pb-20 overflow-hidden relative bg-rauvia-bg">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden relative bg-rauvia-bg">
         <div className="absolute inset-0 pointer-events-none opacity-20" 
              style={{ backgroundImage: 'linear-gradient(#cbd5e1 1px, transparent 1px), linear-gradient(90deg, #cbd5e1 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
         </div>
@@ -86,7 +86,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 2 — IDENTIFICACIÓN DEL CASO */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-16 md:py-24 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">LA SITUACIÓN</span>
@@ -134,7 +134,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 3 — REVELACIÓN DEL PROBLEMA */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-bg">
+      <section className="py-16 md:py-24 bg-rauvia-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">LA CAUSA</span>
           <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-8">
@@ -169,7 +169,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 4 — PRESENTACIÓN DE AETHRYON */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-navy text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-rauvia-navy text-white relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none opacity-5">
            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -226,7 +226,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 5 — CÓMO FUNCIONA */}
       <FadeInUp>
-      <section id="como-funciona" className="py-24 bg-white border-b border-slate-100 scroll-mt-20">
+      <section id="como-funciona" className="py-16 md:py-24 bg-white border-b border-slate-100 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">PROCESO</span>
@@ -312,7 +312,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 6 — QUÉ OBSERVA */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-bg">
+      <section className="py-16 md:py-24 bg-rauvia-bg">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">CRITERIOS DE ANÁLISIS</span>
@@ -399,7 +399,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 7 — QUÉ RECIBE LA EMPRESA */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-16 md:py-24 bg-white border-y border-slate-100">
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">RESULTADO</span>
@@ -462,7 +462,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 8 — EJEMPLO */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-navy text-white">
+      <section className="py-16 md:py-24 bg-rauvia-navy text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-xs font-bold tracking-widest text-rauvia-gold uppercase mb-4 block">CASO DE USO</span>
@@ -502,7 +502,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 9 — CUÁNDO UTILIZARLO */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-bg border-b border-slate-100">
+      <section className="py-16 md:py-24 bg-rauvia-bg border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">APLICACIÓN</span>
@@ -532,7 +532,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 10 — RELACIÓN CON RAUVIA */}
       <FadeInUp>
-      <section className="py-24 bg-white border-b border-slate-100">
+      <section className="py-16 md:py-24 bg-white border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-bold tracking-widest text-slate-400 uppercase mb-4 block">DE LA DECISIÓN A LA EJECUCIÓN</span>
           <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-8">
@@ -581,7 +581,7 @@ export default function AethryonPage() {
 
       {/* SECCIÓN 11 — CIERRE (Footer integration takes care of this partially, but we add the specific CTA block here) */}
       <FadeInUp>
-      <section className="bg-rauvia-navy-dark text-white pt-24 pb-12 relative overflow-hidden">
+      <section className="bg-rauvia-navy-dark text-white pt-16 md:pt-24 pb-12 relative overflow-hidden">
          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-12">
               NO NECESITAS TENER<br/>

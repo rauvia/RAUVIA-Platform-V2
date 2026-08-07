@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, PlayCircle, ShieldCheck, Clock, MonitorSmartphone, Target, ChevronDown } from "lucide-react";
 import AethyronCore from "./AethyronCore";
 
@@ -47,10 +48,13 @@ export default function HeroSection() {
                 CONOCER NUESTROS PRODUCTOS
                 <ArrowRight className="w-4 h-4" />
               </a>
-              <button className="w-full sm:w-auto flex items-center justify-center gap-2 text-rauvia-navy hover:text-rauvia-blue px-4 py-4 sm:py-3 rounded text-sm sm:text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap min-h-[52px]">
+              <Link 
+                to="/aethryon"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 text-rauvia-navy hover:text-rauvia-blue px-4 py-4 sm:py-3 rounded text-sm sm:text-xs xl:text-sm font-semibold tracking-wide transition-all whitespace-nowrap min-h-[52px]"
+              >
                 <PlayCircle className="w-5 h-5 text-rauvia-blue" />
                 CÓMO TRABAJAMOS
-              </button>
+              </Link>
             </div>
           </div>
 

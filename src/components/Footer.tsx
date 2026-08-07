@@ -12,7 +12,7 @@ export default function Footer({ variant = 'home' }: FooterProps) {
   const isSoluciones = variant === 'soluciones';
   
   return (
-    <footer className="bg-rauvia-navy-dark text-white relative overflow-hidden flex flex-col min-h-[100svh] justify-between">
+    <footer className="bg-rauvia-navy-dark text-white relative overflow-hidden flex flex-col min-h-[550px] md:min-h-[100svh] justify-between">
       
       {/* Background Tech Pattern */}
       <div className="absolute inset-0 overflow-hidden">
@@ -20,7 +20,7 @@ export default function Footer({ variant = 'home' }: FooterProps) {
            <img 
                src="/media/aethryon-end-screen-blueprint.svg" 
                alt="AETHRYON Blueprint" 
-               className={`w-[200%] h-[200%] md:w-full md:h-full object-cover object-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-[1.01] transition-transform ${isHome ? 'opacity-40 md:opacity-100' : 'opacity-20 md:opacity-50'}`}
+               className={`w-full h-full object-cover object-center absolute inset-0 scale-[2] md:scale-100 group-hover:scale-[2.02] md:group-hover:scale-[1.01] transition-transform ${isHome ? 'opacity-40 md:opacity-100' : 'opacity-20 md:opacity-50'}`}
            />
          </Link>
       </div>
@@ -40,7 +40,7 @@ export default function Footer({ variant = 'home' }: FooterProps) {
             </div>
 
             {/* Spacer */}
-            <div className="w-full h-48 lg:h-auto lg:col-span-2 xl:col-span-4 order-2 lg:order-none flex justify-center items-center">
+            <div className="w-full h-12 lg:h-auto lg:col-span-2 xl:col-span-4 order-2 lg:order-none flex justify-center items-center">
             </div>
 
             {/* Right Text / Definition & CTA */}
@@ -102,16 +102,16 @@ export default function Footer({ variant = 'home' }: FooterProps) {
       {/* Bottom Bar */}
       <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 pb-8 relative z-10">
         <div className="max-w-[1600px] mx-auto flex flex-col md:grid md:grid-cols-3 items-center gap-8 md:gap-6 pt-8 border-t border-slate-800">
-          <div className="flex justify-center md:justify-start order-2 md:order-1">
+          <div className="flex justify-center md:justify-start order-2 md:order-1 min-h-[44px] items-center">
             <Logo variant="footer" />
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 order-1 md:order-2">
-            <a href="#" className="text-slate-500 hover:text-slate-300 text-xs tracking-wider uppercase transition-colors">Aviso de Privacidad</a>
-            <a href="#" className="text-slate-500 hover:text-slate-300 text-xs tracking-wider uppercase transition-colors">Términos</a>
+            <span className="text-slate-500 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] cursor-default">Aviso de Privacidad</span>
+            <span className="text-slate-500 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] cursor-default">Términos</span>
           </div>
-          <div className="flex justify-center md:justify-end text-center md:text-right order-3 md:order-3">
-            <span className="text-slate-600 text-[10px] sm:text-xs font-mono">
+          <div className="flex justify-center md:justify-end text-center md:text-right order-3 md:order-3 min-h-[44px] items-center">
+            <span className="text-slate-600 text-[10px] sm:text-xs font-mono py-3">
               {isHome ? '© 2026 RAUVIA CONSULTORIA Y DESARROLLO TECNOLÓGICO S.A.S. DE C.V.' : 'RAUVIA Consulting © 2026'}
             </span>
           </div>

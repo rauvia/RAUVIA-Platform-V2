@@ -82,7 +82,7 @@ export default function RecursosPage() {
                       )}
                       <div className="p-6 flex flex-col flex-grow">
                         <h2 className="text-xl font-display text-rauvia-text mb-3 group-hover:text-rauvia-accent transition-colors" dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-                        <div className="text-rauvia-gray mb-4 text-sm flex-grow" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                        <div className="text-rauvia-gray mb-4 text-sm flex-grow line-clamp-3" dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
                         <div className="flex justify-between items-center text-xs text-rauvia-gray mt-auto pt-4 border-t border-rauvia-border/50">
                           <span>{new Date(post.date).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                         </div>

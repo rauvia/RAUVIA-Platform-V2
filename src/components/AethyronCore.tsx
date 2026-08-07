@@ -12,11 +12,11 @@ export default function AethyronCore() {
   return (
     <div className="w-full flex flex-col items-center">
       {/* Container slightly shifted left on desktop to balance the right-labels in SVG. On mobile, we use a negative margin to center it since we hid the right labels in SVG. */}
-      <Link to="/aethryon" className="w-full h-[400px] sm:h-[450px] lg:h-[550px] xl:h-[700px] relative flex items-center justify-center lg:justify-start xl:justify-center -ml-16 sm:-ml-24 lg:-ml-0 group cursor-pointer" title="Conocer más sobre AETHRYON">
+      <Link to="/aethryon" className="w-full h-[300px] sm:h-[400px] lg:h-[550px] xl:h-[700px] relative flex items-center justify-center lg:justify-start xl:justify-center overflow-x-hidden group cursor-pointer" title="Conocer más sobre AETHRYON">
         <img 
            src="/media/aethryon-convergence-animated.svg" 
            alt="Aethyron Core" 
-           className="w-[150%] max-w-none lg:w-full h-full object-contain object-left lg:object-center group-hover:scale-[1.01] transition-transform"
+           className="w-full min-w-[320px] max-w-full lg:max-w-none h-full object-contain object-center lg:object-center group-hover:scale-[1.01] transition-transform"
         />
       </Link>
 
