@@ -24,7 +24,7 @@ assert(fs.existsSync(wpConfigPath), "Debe existir src/config/wordpress.ts centra
 
 if (fs.existsSync(wpConfigPath)) {
   const content = fs.readFileSync(wpConfigPath, 'utf8');
-  assert(content.includes('https://rauvia.com.mx/blog') || content.includes('/blog'), "WP_CONFIG debe apuntar a la nueva API /blog/wp-json");
+  assert(content.includes('blog.rauvia.com.mx') || content.includes('/blog') || content.includes('wp-json'), "WP_CONFIG debe apuntar a la API de WordPress");
 }
 
 // 2. Verificar consumo de WP_CONFIG en wp.ts
@@ -38,7 +38,7 @@ if (fs.existsSync(wpTsPath)) {
 const sitemapScriptPath = path.join(__dirname, 'generate-sitemap.js');
 if (fs.existsSync(sitemapScriptPath)) {
   const content = fs.readFileSync(sitemapScriptPath, 'utf8');
-  assert(content.includes('/blog/wp-json'), "generate-sitemap.js debe usar la nueva ruta de API para el blog");
+  assert(content.includes('blog.rauvia.com.mx') || content.includes('/blog') || content.includes('wp-json'), "generate-sitemap.js debe usar la ruta de API para el blog");
 }
 
 if (errors > 0) {

@@ -1,9 +1,9 @@
 /**
  * Configuración centralizada de endpoints de WordPress.
- * Apunta a la nueva ubicación en /blog/
+ * Apunta a https://blog.rauvia.com.mx
  */
 
-const WP_BASE_URL = import.meta.env.VITE_WORDPRESS_PUBLIC_URL || 'https://rauvia.com.mx/blog';
+const WP_BASE_URL = import.meta.env.VITE_WORDPRESS_PUBLIC_URL || 'https://blog.rauvia.com.mx';
 const WP_API_BASE = import.meta.env.VITE_WORDPRESS_API_URL || `${WP_BASE_URL}/wp-json/wp/v2`;
 
 export const WP_CONFIG = {

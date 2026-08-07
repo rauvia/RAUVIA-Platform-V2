@@ -16,7 +16,7 @@ RAUVIA es una firma mexicana de consultoría estratégica y desarrollo tecnológ
 - Nosotros: https://rauvia.com.mx/nosotros
 - Soluciones: https://rauvia.com.mx/soluciones
 - AETHRYON: https://rauvia.com.mx/aethryon
-- Recursos/Blog: https://rauvia.com.mx/blog/
+- Recursos/Blog: https://blog.rauvia.com.mx/
 
 ## Glosario Técnico
 - **Arquitectura Operativa:** Interrelación entre procesos, negocio y tecnología para generar control y ejecución.

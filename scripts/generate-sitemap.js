@@ -21,7 +21,7 @@ const staticPages = [
 async function fetchWordPressPosts() {
   // Assuming the blog is hosted under /blog or main domain, standard WP API
   // Using the live domain for posts if possible
-  const wpApiUrl = process.env.WP_API_URL || `${SITE_URL}/blog/wp-json/wp/v2/posts?status=publish&per_page=100`;
+  const wpApiUrl = process.env.WP_API_URL || 'https://blog.rauvia.com.mx/wp-json/wp/v2/posts?status=publish&per_page=100';
   try {
     const response = await fetch(wpApiUrl);
     if (!response.ok) return [];

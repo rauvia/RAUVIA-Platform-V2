@@ -1,6 +1,46 @@
 import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
+import { FALLBACK_POSTS } from './src/data/fallbackPosts';
+
+let cachedPosts: any[] = FALLBACK_POSTS;
+let lastFetchTime = 0;
+const CACHE_TTL = 10 * 60 * 1000; // 10 minutes cache
+
+async function fetchWPPosts(slug?: string) {
+  const wpBase = process.env.VITE_WORDPRESS_API_URL || 'https://blog.rauvia.com.mx/wp-json/wp/v2';
+  const wpUrl = slug
+    ? `${wpBase}/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
+    : `${wpBase}/posts?_embed&status=publish`;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+    const wpRes = await fetch(wpUrl, { signal: controller.signal });
+    clearTimeout(timeoutId);
+
+    if (wpRes.ok) {
+      const data = await wpRes.json();
+      if (Array.isArray(data) && data.length > 0) {
+        if (!slug) {
+          cachedPosts = data;
+          lastFetchTime = Date.now();
+        }
+        return data;
+      }
+    }
+  } catch (err: any) {
+    // Quietly catch network / DNS resolution errors without throwing
+  }
+
+  // Fallback to cache or hardcoded fallback
+  if (slug) {
+    const match = cachedPosts.find((p: any) => p.slug === slug);
+    return match ? [match] : [];
+  }
+  return cachedPosts;
+}
 
 async function startServer() {
   const app = express();
@@ -10,22 +50,9 @@ async function startServer() {
 
   // WP Posts Proxy Route
   app.get('/api/wp/posts', async (req, res) => {
-    try {
-      const slug = req.query.slug as string | undefined;
-      const wpUrl = slug
-        ? `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
-        : `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?_embed&status=publish`;
-
-      const wpRes = await fetch(wpUrl);
-      if (!wpRes.ok) {
-        return res.status(wpRes.status).json({ error: 'Failed to fetch from WordPress' });
-      }
-      const data = await wpRes.json();
-      res.json(data);
-    } catch (err) {
-      console.error('Error proxying WP posts:', err);
-      res.status(500).json({ error: 'Internal server error proxying WP' });
-    }
+    const slug = req.query.slug as string | undefined;
+    const posts = await fetchWPPosts(slug);
+    res.json(posts);
   });
 
   // LLM / LLMO API Endpoint

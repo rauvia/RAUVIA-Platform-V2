@@ -23,9 +23,9 @@ define('NONCE_SALT',       'put your unique phrase here');
 
 $table_prefix = 'wp_';
 
-// URL Config for Subdirectory
-define( 'WP_HOME', 'https://rauvia.com.mx/blog' );
-define( 'WP_SITEURL', 'https://rauvia.com.mx/blog' );
+// URL Config for Subdomain
+define( 'WP_HOME', 'https://blog.rauvia.com.mx' );
+define( 'WP_SITEURL', 'https://blog.rauvia.com.mx' );
 define( 'FORCE_SSL_ADMIN', true );
 
 define( 'WP_DEBUG', false );

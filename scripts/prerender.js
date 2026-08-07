@@ -24,9 +24,10 @@ async function startServer() {
   app.get('/api/wp/posts', async (req, res) => {
     try {
       const slug = req.query.slug;
+      const wpBase = process.env.VITE_WORDPRESS_API_URL || 'https://blog.rauvia.com.mx/wp-json/wp/v2';
       const wpUrl = slug
-        ? `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
-        : `https://rauvia.com.mx/blog/wp-json/wp/v2/posts?_embed&status=publish`;
+        ? `${wpBase}/posts?slug=${encodeURIComponent(slug)}&_embed&status=publish`
+        : `${wpBase}/posts?_embed&status=publish`;
 
       const wpRes = await fetch(wpUrl);
       if (!wpRes.ok) return res.status(wpRes.status).json([]);

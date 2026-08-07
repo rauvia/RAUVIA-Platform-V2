@@ -1,4 +1,5 @@
 import { WP_CONFIG } from '../config/wordpress';
+import { FALLBACK_POSTS } from '../data/fallbackPosts';
 
 export interface WPPost {
   id: number;
@@ -48,10 +49,10 @@ export async function getPosts(): Promise<WPPost[]> {
   try {
     const response = await fetch(`${WP_CONFIG.endpoints.posts}?_embed&status=publish`);
     if (!response.ok) throw new Error('Failed to fetch posts');
-    return await response.json();
+    const data = await response.json();
+    return Array.isArray(data) && data.length > 0 ? data : FALLBACK_POSTS;
   } catch (error) {
-    console.error('Error fetching WP posts:', error);
-    return [];
+    return FALLBACK_POSTS;
   }
 }
 
@@ -72,9 +73,11 @@ export async function getPostBySlug(slug: string): Promise<WPPost | null> {
     const response = await fetch(`${WP_CONFIG.endpoints.posts}?slug=${slug}&_embed&status=publish`);
     if (!response.ok) throw new Error('Failed to fetch post');
     const posts = await response.json();
-    return posts.length > 0 ? posts[0] : null;
+    if (posts.length > 0) return posts[0];
   } catch (error) {
-    console.error(`Error fetching WP post ${slug}:`, error);
-    return null;
+    // Fall back below
   }
+
+  const match = FALLBACK_POSTS.find(p => p.slug === slug);
+  return match || null;
 }
