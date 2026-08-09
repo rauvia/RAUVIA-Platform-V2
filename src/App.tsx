@@ -1,6 +1,6 @@
 import React from 'react';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import NosotrosPage from './pages/NosotrosPage';
@@ -9,6 +9,8 @@ import AethryonPage from './pages/AethryonPage';
 import RecursosPage from './pages/RecursosPage';
 import PostPage from './pages/PostPage';
 import NotFoundPage from './pages/NotFoundPage';
+import AvisoPrivacidadPage from './pages/AvisoPrivacidadPage';
+import TerminosPage from './pages/TerminosPage';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -47,6 +49,8 @@ export default function App() {
               <Route path="/aethryon" element={<AethryonPage />} />
               <Route path="/recursos" element={<RecursosPage />} />
               <Route path="/recursos/:slug" element={<PostPage />} />
+              <Route path="/aviso-de-privacidad" element={<AvisoPrivacidadPage />} />
+              <Route path="/terminos" element={<TerminosPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </main>

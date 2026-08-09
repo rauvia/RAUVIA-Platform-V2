@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { ArrowRight, PlayCircle, ShieldCheck, Clock, MonitorSmartphone, Target, ChevronDown } from "lucide-react";
 import AethyronCore from "./AethyronCore";
 

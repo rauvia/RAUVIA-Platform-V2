@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router";
 import { ArrowRight, Menu, X } from "lucide-react";
 import Logo from "./Logo";
 
@@ -34,7 +34,12 @@ export default function Navbar() {
 
   // Focus trap
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      // Return focus to the toggle button when menu closes
+      const toggleBtn = document.getElementById('menu-toggle-btn');
+      toggleBtn?.focus();
+      return;
+    }
     
     const panel = panelRef.current;
     if (!panel) return;
@@ -43,13 +48,18 @@ export default function Navbar() {
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
     );
     
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
     const toggleBtn = document.getElementById('menu-toggle-btn');
+    if (!toggleBtn) return;
+
+    // Combine toggle button and panel elements into one array
+    const allFocusable = [toggleBtn, ...Array.from(focusableElements)] as HTMLElement[];
     
-    // Focus first element on open
-    if (firstElement) {
-      firstElement.focus();
+    const firstElement = allFocusable[0];
+    const lastElement = allFocusable[allFocusable.length - 1];
+    
+    // Focus first element on open (which is the toggle btn, or the first link, let's focus the first link inside the panel)
+    if (focusableElements[0]) {
+      focusableElements[0].focus();
     }
     
     const handleTab = (e: KeyboardEvent) => {
@@ -58,18 +68,12 @@ export default function Navbar() {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           e.preventDefault();
-          toggleBtn?.focus();
-        } else if (document.activeElement === toggleBtn) {
-          e.preventDefault();
-          lastElement?.focus();
+          lastElement.focus();
         }
       } else {
         if (document.activeElement === lastElement) {
           e.preventDefault();
-          toggleBtn?.focus();
-        } else if (document.activeElement === toggleBtn) {
-          e.preventDefault();
-          firstElement?.focus();
+          firstElement.focus();
         }
       }
     };
@@ -91,8 +95,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           
           {/* Logo */}
-          <div className="relative z-[60]">
-            <Link to="/" onClick={() => setIsOpen(false)}>
+          <div className="relative z-[60] flex items-center h-full">
+            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center min-h-[44px] py-1">
               <Logo />
             </Link>
           </div>

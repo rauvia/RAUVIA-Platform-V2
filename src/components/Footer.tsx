@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
 interface FooterProps {
@@ -107,8 +107,8 @@ export default function Footer({ variant = 'home' }: FooterProps) {
           </div>
           
           <div className="flex flex-wrap justify-center gap-6 order-1 md:order-2">
-            <span className="text-slate-500 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] cursor-default">Aviso de Privacidad</span>
-            <span className="text-slate-500 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] cursor-default">Términos</span>
+            <Link to="/aviso-de-privacidad" className="text-slate-500 hover:text-slate-300 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] transition-colors">Aviso de Privacidad</Link>
+            <Link to="/terminos" className="text-slate-500 hover:text-slate-300 text-xs tracking-wider uppercase py-3 flex items-center min-h-[44px] transition-colors">Términos</Link>
           </div>
           <div className="flex justify-center md:justify-end text-center md:text-right order-3 md:order-3 min-h-[44px] items-center">
             <span className="text-slate-600 text-[10px] sm:text-xs font-mono py-3">

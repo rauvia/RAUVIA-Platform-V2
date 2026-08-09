@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router';
 import { ArrowLeft } from 'lucide-react';
 import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';

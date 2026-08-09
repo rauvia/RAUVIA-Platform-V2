@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';
 import { RAUVIA_ENTITY } from '../config/entity';
@@ -362,7 +362,7 @@ export default function SolucionesPage() {
 
       {/* SECCIÓN 2 — FILOSOFÍA */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-10 md:py-20 bg-white border-y border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-8">
             NO VENDEMOS SERVICIOS.<br/>
@@ -385,7 +385,7 @@ export default function SolucionesPage() {
       </FadeInUp>
 
       {/* SECCIÓN 3 — CATÁLOGO DE ACTIVOS */}
-      <section id="catalogo" className="py-24 bg-rauvia-bg">
+      <section id="catalogo" className="py-10 md:py-20 bg-rauvia-bg">
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           
           <div className="mb-12">
@@ -575,10 +575,10 @@ export default function SolucionesPage() {
 
       {/* SECCIÓN 4 — RELACIÓN ENTRE PRODUCTOS (MAPA) */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100 overflow-hidden">
+      <section className="py-10 md:py-20 bg-white border-y border-slate-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold text-rauvia-navy mb-4">MAPA DE CRECIMIENTO ESTRUCTURAL</h2>
-          <p className="text-slate-600 mb-16 max-w-2xl mx-auto">El crecimiento requiere construir activos en secuencia. Cada nueva capacidad se apoya en la estructura de la anterior.</p>
+          <p className="text-slate-600 mb-10 md:mb-16 max-w-2xl mx-auto">El crecimiento requiere construir activos en secuencia. Cada nueva capacidad se apoya en la estructura de la anterior.</p>
           
           <div className="relative w-full">
              <GrowthStructuralMap />
@@ -589,7 +589,7 @@ export default function SolucionesPage() {
 
       {/* SECCIÓN 5 — COMPARADOR */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-bg">
+      <section className="py-10 md:py-20 bg-rauvia-bg">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-rauvia-navy mb-12 text-center">¿QUÉ ACTIVO NECESITA TU EMPRESA?</h2>
           
@@ -628,14 +628,14 @@ export default function SolucionesPage() {
 
       {/* SECCIÓN 6 — AETHRYON INTEGRATION */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-navy text-white relative overflow-hidden">
+      <section className="py-10 md:py-20 bg-rauvia-navy text-white relative overflow-hidden">
         {/* Background Grid */}
         <div className="absolute inset-0 pointer-events-none opacity-10" 
              style={{ backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <span className="text-rauvia-gold font-bold tracking-widest text-sm uppercase block mb-3">MOTOR DE DECISIÓN</span>
             <h2 className="text-3xl lg:text-4xl font-extrabold leading-tight">
               AETHRYON DEFINE EL CAMINO.

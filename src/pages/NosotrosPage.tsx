@@ -1,7 +1,7 @@
 import SEO from '../components/SEO';
 import JsonLd from '../components/JsonLd';
 import { RAUVIA_ENTITY } from '../config/entity';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { ArrowRight, PlayCircle, ShieldCheck, Target, Layers, Settings, BarChart3, TrendingUp, Hexagon } from 'lucide-react';
 import FadeInUp from '../components/FadeInUp';
 import Footer from '../components/Footer';
@@ -91,7 +91,7 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 2 — ORIGEN DEL PROBLEMA */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-10 md:py-20 bg-white border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full">
             <div className="flex justify-center">
@@ -107,7 +107,7 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 4 — FORMA DE TRABAJO */}
       <FadeInUp>
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-10 md:py-20 bg-white border-y border-slate-100">
         <div className="w-full px-4 sm:px-6 lg:px-12 mx-auto">
           <div className="flex justify-center">
             <div className="relative w-full max-w-[1600px]">
@@ -120,9 +120,9 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 5 — PRINCIPIOS */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-navy-dark text-white">
+      <section className="py-10 md:py-20 bg-rauvia-navy-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold mb-16 text-center tracking-tight">PRINCIPIOS DE TRABAJO</h2>
+          <h2 className="text-3xl font-extrabold mb-10 md:mb-16 text-center tracking-tight">PRINCIPIOS DE TRABAJO</h2>
           
           <div className="flex flex-wrap justify-center gap-8">
             {[
@@ -147,7 +147,7 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 6 — AETHRYON */}
       <FadeInUp>
-      <section className="py-24 bg-white border-b border-slate-100 overflow-hidden relative">
+      <section className="py-10 md:py-20 bg-white border-b border-slate-100 overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -178,9 +178,9 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 7 — FUNDADOR */}
       <FadeInUp>
-      <section className="py-24 bg-rauvia-bg">
+      <section className="py-10 md:py-20 bg-rauvia-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 max-w-3xl">
+          <div className="mb-10 md:mb-16 max-w-3xl">
             <h2 className="text-3xl lg:text-4xl font-extrabold text-rauvia-navy leading-tight mb-6">
               RAUVIA FUE CONSTRUIDA DESDE LA INTERSECCIÓN ENTRE <span className="text-rauvia-blue">NEGOCIO, OPERACIÓN Y TECNOLOGÍA.</span>
             </h2>
@@ -213,7 +213,7 @@ export default function NosotrosPage() {
 
       {/* SECCIÓN 8 — RELACIÓN CON EL CLIENTE */}
       <FadeInUp>
-      <section className="py-24 bg-white border-t border-slate-100">
+      <section className="py-10 md:py-20 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
